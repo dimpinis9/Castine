@@ -1,0 +1,71 @@
+/* Header.css */
+header {
+  background: rgba(52, 58, 64, 0.85);
+  color: black;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: semi-bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f8f9fa; /* Λίγο ανοιχτότερο γκρι για hover effect */
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cart img {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.cart .cart-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.cart .cart-icon i {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.cart .cart-count {
+  background-color: #007bff;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+}

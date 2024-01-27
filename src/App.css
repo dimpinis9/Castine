@@ -1,0 +1,38 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+}
+
+header, footer {
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+main {
+  margin: 2rem 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(233, 227, 221, 1); /* Αυτό θα ορίσει το χρώμα του background */
+  color: #333; /* Για καλύτερη αντίθεση, ρυθμίστε το χρώμα του κειμένου */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; /* Προσθέστε μια κοινή stack διαφόρων γραμματοσειρών */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Προσθέστε εδώ περαιτέρω CSS για τα components */
+
