@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/Header.css';
-import Modal from 'react-modal';
+
+import CartModal from './CartModal'; // Βεβαιωθείτε ότι έχετε κάνει import το CartModal
 
 export const Header = () => {
   const [isCartModalOpen, setCartModalOpen] = useState(false);
@@ -29,15 +30,7 @@ export const Header = () => {
       <div className="cart" onClick={openCartModal}>
         <i className="fas fa-shopping-cart"></i>
       </div>
-      <Modal
-        isOpen={isCartModalOpen}
-        onRequestClose={closeCartModal}
-        contentLabel="Καλάθι"
-      >
-        {/* Προσθέστε εδώ το περιεχόμενο του modal */}
-        <h2>Το καλάθι σας</h2>
-        <button onClick={closeCartModal}>Κλείσιμο</button>
-      </Modal>
+      <CartModal isOpen={isCartModalOpen} onRequestClose={closeCartModal} />
     </header>
   );
 };
