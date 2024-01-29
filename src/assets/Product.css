@@ -16,11 +16,19 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
-  
-
+  .product-details h1 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
   .product-introduction {
     margin-bottom: 20px; 
     line-height: 1.5;
+    border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); 
+  padding: 15px; 
+  border-radius: 10px;
+    
   }
   
   .product-info {
