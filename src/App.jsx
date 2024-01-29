@@ -1,24 +1,25 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import {Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { MainContent } from './components/MainContent';
 import { Footer } from './components/Footer';
-import { About } from './components/About';
+import  {About}  from './components/About';
+import  Product  from './components/Product';
 import ContactForm from './components/ContactForm';
 import './App.css';
 
 function App() {
-  // Χρησιμοποιούμε το useLocation για να πάρουμε την τρέχουσα διεύθυνση URL
+  
   const location = useLocation();
 
-  // Καθορίζουμε την κλάση που θα χρησιμοποιηθεί για το καλωσόρισμα
+ 
   let welcomeClass = 'welcome';
 
-  // Εάν είμαστε στην αρχική σελίδα, χρησιμοποιούμε την κλάση 'homepage' για το καλωσόρισμα
+  
   if (location.pathname === '/') {
     welcomeClass += ' homepage';
   } else {
-    // Σε κάθε άλλη σελίδα, χρησιμοποιούμε την κλάση 'hidden' για να το κρύψουμε
+    
     welcomeClass += ' hidden';
   }
 
@@ -30,10 +31,17 @@ function App() {
       </div>
       <Header />
       <div className="content-container"> 
+        
         <Routes>
           <Route path="/" element={
             <>
               <MainContent />
+              <Footer />
+            </>
+          } />
+          <Route path="/products" element={
+            <>
+              <Product />
               <Footer />
             </>
           } />
@@ -45,6 +53,7 @@ function App() {
           } />
           <Route path="/contact" element={<ContactForm />} />
         </Routes>
+      
       </div>
     </div>
   );

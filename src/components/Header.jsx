@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/Header.css';
-
-import CartModal from './CartModal'; // Βεβαιωθείτε ότι έχετε κάνει import το CartModal
+import CartModal from './CartModal'; 
+import logo from '../assets/images/castine-logo.png'; // Εισαγωγή της εικόνας
 
 export const Header = () => {
   const [isCartModalOpen, setCartModalOpen] = useState(false);
@@ -16,9 +16,9 @@ export const Header = () => {
 
   return (
     <header>
-      <div className="logo">
-        <img src="/logo.png" alt="Λογότυπο" />
-      </div>
+     <div className="logo">
+     <img src={logo}/>
+</div>
       <nav>
         <ul>
           <li><a href="/">Αρχική</a></li>
