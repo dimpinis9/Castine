@@ -1,6 +1,6 @@
 
 header {
-  background-color: #ca9613;
+  background-color: #DBF1FD;
   color: black;
   padding: 1rem 2rem;
   display: flex;
@@ -9,6 +9,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo img {
@@ -20,6 +21,7 @@ nav ul {
   padding: 0;
   display: flex;
   gap: 2rem;
+ 
   
 }
 
@@ -29,6 +31,7 @@ nav ul li a {
   font-weight: semi-bold;
   font-family: cursive;
   transition: color 0.3s ease;
+ 
 }
 
 nav ul li a:hover {
