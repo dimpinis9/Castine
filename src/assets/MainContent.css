@@ -179,4 +179,16 @@ main {
   .product-summary {
     margin-top: 150px;
   }
+
+  .product-title, .product-description h1, .product-description h2, .product-description p {
+    font-size: 1.5rem;
+  }
+
+  .summary-title, .summary-price {
+    font-size: 1.2rem;
+  }
+
+  .summary-text {
+    font-size: 1rem;
+  }
 }
