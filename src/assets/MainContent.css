@@ -156,3 +156,27 @@ main {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3); /* Προσαρμογή του box-shadow κατά το active */
 }
+
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+
+  .hero {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .product-description {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .mySlides {
+    width: 100%;
+  }
+
+  .product-summary {
+    margin-top: 150px;
+  }
+}
