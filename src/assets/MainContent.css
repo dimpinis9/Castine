@@ -17,14 +17,70 @@ main {
 
 /* Hero section */
 .hero {
-  width: 40%;
-  margin-left: -20%;
+  width: 60%; /* Μειώνει το πλάτος για να μην καλύπτει πολύ μεγάλο μέρος της σελίδας */
+  margin-left: 20%; /* Μετατοπίζει το κείμενο προς τα δεξιά */
 }
 
 /* Τίτλος προϊόντος */
 .product-title {
   margin-bottom: 4rem;
   margin-top: -7rem;
+}
+
+/* Περιγραφή προϊόντος */
+.product-description {
+  color: black;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  background-color: rgba(233, 227, 221, 0.8);
+  font-family: sans-serif;
+  margin-left: 30%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  text-align: center; /* Κείμενο κεντρικά */
+}
+
+.product-description h1,
+.product-description h2,
+.product-description p {
+  margin-bottom: 1rem;
+}
+
+.product-description h1 {
+  font-size: 3rem;
+}
+
+.product-description h2 {
+  font-size: 2rem;
+}
+
+.product-description p {
+  font-size: 1.5rem;
+}
+
+.product-description button {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(29, 19, 8, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: sans-serif;
+}
+
+.product-description button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(233, 227, 221, 0.5);
+}
+
+.product-description button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3);
 }
 
 /* Παρουσίαση προϊόντος */
@@ -52,61 +108,6 @@ main {
 
 .showing {
   display: block;
-}
-
-/* Περιγραφή προϊόντος */
-.product-description {
-  color: black;
-  display: inline-block;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 30px;
-  background-color: rgba(233, 227, 221, 0.8);
-  font-family: sans-serif;
-  margin-left: 30%;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  position: relative; /* Προσθήκη position */
-  z-index: 2;
-}
-
-.product-description h1,
-.product-description h2,
-.product-description p {
-  margin-bottom: 1rem;
-}
-
-.product-description h1 {
-  font-size: 3rem;
-}
-
-.product-description h2 {
-  font-size: 2rem;
-}
-
-.product-description p {
-  font-size: 1.5rem;
-}
-
-.product-description button {
-  font-size: 1rem;
-  padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(29, 19, 8, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: sans-serif;
-}
-
-.product-description button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(233, 227, 221, 0.5);
-}
-
-.product-description button:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3);
 }
 
 /* Σύνοψη προϊόντος */
@@ -146,8 +147,8 @@ main {
 .product-summary button {
   font-size: 1rem;
   padding: 1rem 2rem;
-  background-color: rgba(59, 33, 8, 0.5);
-  color: black;
+  background-color: black;
+  color: white;
   border: none;
   border-radius: 50px;
   box-shadow: 0 4px 8px rgba(29, 19, 8, 0.3);
@@ -165,12 +166,14 @@ main {
   box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3);
 }
 
+
 /* Προσθέστε εδώ περισσότερο περιεχόμενο και φωτογραφίες */
 
 @media only screen and (max-width: 600px) {
   body {
     font-size: 16px;
     overflow-x: hidden;
+    width: 100%;
   }
 
   main {
@@ -201,19 +204,19 @@ main {
   }
 
   .product-description h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .product-description h2 {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .product-description p {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   .product-description button {
-    font-size: 0.5rem;
+    font-size: 1rem;
     padding: 0.5rem 1rem;
   }
 
@@ -251,7 +254,7 @@ main {
   }
 
   .summary-text {
-    font-size: 9px;
+    font-size: 15px;
   }
 
   .summary-price {
@@ -259,7 +262,7 @@ main {
   }
 
   .product-summary button {
-    font-size: 0.5rem;
+    font-size: 1rem;
     padding: 0.5rem 1rem;
   }
 }

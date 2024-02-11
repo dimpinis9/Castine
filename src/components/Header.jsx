@@ -5,6 +5,7 @@ import logo from '../assets/images/castine-logo.png'; // Εισαγωγή της
 
 export const Header = () => {
   const [isCartModalOpen, setCartModalOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const openCartModal = () => {
     setCartModalOpen(true);
@@ -16,10 +17,10 @@ export const Header = () => {
 
   return (
     <header>
-     <div className="logo">
-     <img src={logo}/>
-</div>
-      <nav>
+      <div className="logo">
+        <img src={logo} alt="Logo" />
+      </div>
+      <nav className={isMenuOpen ? "open" : ""}>
         <ul>
           <li><a href="/">Αρχική</a></li>
           <li><a href="/products">Το Προϊόν</a></li>
@@ -27,6 +28,9 @@ export const Header = () => {
           <li><a href="/contact">Επικοινωνία</a></li>
         </ul>
       </nav>
+      <div className="menu-icon" onClick={() => setMenuOpen(!isMenuOpen)}>
+        <i className={isMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
+      </div>
       <div className="cart" onClick={openCartModal}>
         <i className="fas fa-shopping-cart"></i>
       </div>
