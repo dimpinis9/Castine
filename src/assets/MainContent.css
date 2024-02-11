@@ -1,84 +1,39 @@
+/* Καθαρισμός βασικών στυλ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Κρυφή οριζόντια κύλιση */
+body {
+  overflow-x: hidden;
+}
+
+/* Βασικό περιεχόμενο με περιθώρια */
 main {
   padding: 5rem;
 }
 
+/* Hero section */
 .hero {
   width: 40%;
   margin-left: -20%;
 }
 
+/* Τίτλος προϊόντος */
 .product-title {
   margin-bottom: 4rem;
   margin-top: -7rem;
- 
-}
-.product-description {
-  color: black;
-  display: inline-block;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 30px;
-  background-color: #fbf9ed;
-  font-family: sans-serif;
-  margin-left: 30%;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.product-description h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
- 
-  
-}
-
-.product-description h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
- 
-  
-}
-
-
-.product-description p {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
- 
-}
-
-.product-description button {
-  font-size: 1rem;
-  padding: 1rem 2rem;
-  background-color: WHITE; /* Προσθήκη διαφάνειας στο χρώμα */
-  color: black; /* Αλλαγή του χρώματος του κειμένου */
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(29, 19, 8, 0.3); /* Προσαρμογή του box-shadow */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: sans-serif;
- 
-}
-
-.product-description button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(233, 227, 221, 0.5); /* Προσαρμογή του box-shadow κατά το hover */
-}
-
-.product-description button:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3); /* Προσαρμογή του box-shadow κατά το active */
-}
-
+/* Παρουσίαση προϊόντος */
 .slideshow-container {
   position: relative;
   max-width: 1000px;
   margin: auto;
   margin-top: 10px;
+  z-index: 1;
 }
 
 .mySlides {
@@ -99,20 +54,77 @@ main {
   display: block;
 }
 
+/* Περιγραφή προϊόντος */
+.product-description {
+  color: black;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  background-color: rgba(233, 227, 221, 0.8);
+  font-family: sans-serif;
+  margin-left: 30%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: relative; /* Προσθήκη position */
+  z-index: 2;
+}
+
+.product-description h1,
+.product-description h2,
+.product-description p {
+  margin-bottom: 1rem;
+}
+
+.product-description h1 {
+  font-size: 3rem;
+}
+
+.product-description h2 {
+  font-size: 2rem;
+}
+
+.product-description p {
+  font-size: 1.5rem;
+}
+
+.product-description button {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(29, 19, 8, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: sans-serif;
+}
+
+.product-description button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(233, 227, 221, 0.5);
+}
+
+.product-description button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3);
+}
+
+/* Σύνοψη προϊόντος */
 .product-summary {
+  margin-top: 2rem;
   background-color: rgba(233, 227, 221, 0.8);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
- 
   text-align: center;
-  margin-top: 300px;
+  position: relative;
+  z-index: 2;
 }
 
-.summary-title {
+.summary-title,
+.summary-price {
   font-size: 24px;
   color: #333;
-  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
@@ -131,36 +143,35 @@ main {
   margin: 20px auto;
 }
 
-.summary-price {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
 .product-summary button {
   font-size: 1rem;
   padding: 1rem 2rem;
-  background-color: rgba(59, 33, 8, 0.5); /* Προσθήκη διαφάνειας στο χρώμα */
-  color: black; /* Αλλαγή του χρώματος του κειμένου */
+  background-color: rgba(59, 33, 8, 0.5);
+  color: black;
   border: none;
   border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(29, 19, 8, 0.3); /* Προσαρμογή του box-shadow */
+  box-shadow: 0 4px 8px rgba(29, 19, 8, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   font-family: sans-serif;
- 
 }
 
 .product-summary button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(233, 227, 221, 0.5); /* Προσαρμογή του box-shadow κατά το hover */
+  box-shadow: 0 6px 12px rgba(233, 227, 221, 0.5);
 }
 
 .product-summary button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3); /* Προσαρμογή του box-shadow κατά το active */
+  box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3);
 }
 
+/* Προσθέστε εδώ περισσότερο περιεχόμενο και φωτογραφίες */
+
 @media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
   main {
     padding: 1rem;
   }
@@ -170,28 +181,84 @@ main {
     margin-left: 0;
   }
 
+  .content-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+ 
+  .product-title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    order: 2;
+  }
+
   .product-description {
     margin-left: 0;
     padding: 10px;
+    margin-top: 15px;
   }
 
-  .mySlides {
-    width: 100%;
-  }
-
-  .product-summary {
-    margin-top: 150px;
-  }
-
-  .product-title, .product-description h1, .product-description h2, .product-description p {
+  .product-description h1 {
     font-size: 1.5rem;
   }
 
-  .summary-title, .summary-price {
-    font-size: 1.2rem;
+  .product-description h2 {
+    font-size: 1rem;
+  }
+
+  .product-description p {
+    font-size: 0.75rem;
+  }
+
+  .product-description button {
+    font-size: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin-top: 0;
+    overflow: hidden; /* Προσθήκη overflow για να κρύψει τις εικόνες εκτός οθόνης */
+  }
+
+  .mySlides {
+    position: absolute;
+    display: none;
+    margin-top: 0;
+    width: 100%;
+    transform: translateX(0);
+  }
+
+  .mySlides:first-child {
+    display: block; /* Εμφανίζεται μόνο η πρώτη εικόνα αρχικά */
+  }
+
+  .showing {
+    display: block !important; /* Εμφάνιση της εικόνας που έχει την κλάση showing */
+  }
+
+
+
+  .product-summary {
+    margin-top: 1rem;
+  }
+
+  .summary-title {
+    font-size: 12px;
   }
 
   .summary-text {
-    font-size: 1rem;
+    font-size: 9px;
+  }
+
+  .summary-price {
+    font-size: 12px;
+  }
+
+  .product-summary button {
+    font-size: 0.5rem;
+    padding: 0.5rem 1rem;
   }
 }
