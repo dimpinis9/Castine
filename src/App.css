@@ -1,8 +1,9 @@
 #root {
   max-width: 2000px;
   margin: 0 auto;
-  padding: 2rem;
+  
   text-align: center;
+  width: 100%;
 }
 
 .App {
@@ -57,3 +58,5 @@ code {
 .welcome.hidden {
   display: none;
 }
+
+
