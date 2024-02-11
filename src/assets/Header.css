@@ -29,7 +29,7 @@ nav ul li a {
   color: black;
   text-decoration: none;
   font-weight: semi-bold;
-  font-family: cursive;
+ font-family: sans-serif;
   transition: color 0.3s ease;
  
 }
