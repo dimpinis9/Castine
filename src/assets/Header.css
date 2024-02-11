@@ -81,9 +81,10 @@ nav ul li a:hover {
 /* Απόκριση σε μικρές οθόνες */
 @media only screen and (max-width: 600px) {
   header {
-    padding: 0.5rem 1rem; 
-    width: 100%; /* Πλήρης πλάτος για μικρές οθόνες */
-    /* Μείωση του padding για πιο συμπαγή εμφάνιση */
+    /* padding: 0.5rem 1rem;  */
+    width: 100%;
+    
+    
   }
 
   .logo img {
@@ -141,4 +142,4 @@ nav ul li a:hover {
     padding: 3px 8px; /* Μικρότερο padding για τον αριθμό στο καλάθι για μικρές οθόνες */
     font-size: 0.8rem; /* Μικρότερο μέγεθος γραμματοσειράς για τον αριθμό στο καλάθι για μικρές οθόνες */
   }
-}
+
