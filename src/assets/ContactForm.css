@@ -1,65 +1,77 @@
-.contact{
-    min-height: 1000px;
-    width: 1200px;
+.contact {
+  min-height: 1000px;
+  padding: 20px;
 }
 
 .contact-form-container {
-    background-color: rgb(235, 231, 228);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    font-family: cursive;
-    text-align: center;
-    
-    min-height: 500px;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    width: 100%;
+  background-color: rgb(235, 231, 228);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  width: 100%; 
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin: 10px 0;
+  width: 100%; 
+  max-width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-family: cursive;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: rgba(233, 227, 221, 1);
+  color: #333;
+  font-family: sans-serif;
+  font-weight: bold;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #333;
+  color: rgba(233, 227, 221, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-form-container {
+    width: 70%; /* Πλάτος για μεγαλύτερες οθόνες */
   }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  
+
   .form-group {
-    margin: 10px 0;
-    width: 50%;
+    width: 50%; /* Μισό πλάτος για μεγαλύτερες οθόνες */
   }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-family: cursive;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  button[type="submit"] {
-    background-color: rgba(233, 227, 221, 1);
-    color: #333;
-    font-family: cursive;
-    font-weight: bold;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #333;
-    color: rgba(233, 227, 221, 1);
-  }
-  
+}

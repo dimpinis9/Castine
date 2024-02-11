@@ -1,7 +1,7 @@
 #root {
   max-width: 2000px;
   margin: 0 auto;
-  
+  padding: rem;
   text-align: center;
   width: 100%;
 }
@@ -23,7 +23,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: white; /* Αυτό θα ορίσει το χρώμα του background */
-  color: #333; /* Για καλύτερη αντίθεση, ρυθμίστε το χρώμα του κειμένου */
+  color: #333; 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; /* Προσθέστε μια κοινή stack διαφόρων γραμματοσειρών */
