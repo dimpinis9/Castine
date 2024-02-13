@@ -20,6 +20,7 @@ header {
 .logo h1 {
   font-size: 2rem;
   margin-top: 1rem;
+  margin-left: 1rem;
   font-family: sans-serif;
   font-weight: 200;
 }
@@ -110,12 +111,12 @@ nav.open {
 }
 
 .login-icon, .cart {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 /* Στυλ για το εικονίδιο σύνδεσης (login) */
 .login-icon {
-  color: #007bff; /* Χρώμα του εικονιδίου */
+  color: black; /* Χρώμα του εικονιδίου */
   font-size: 20px; /* Μέγεθος εικονιδίου */
   cursor: pointer; /* Καθορίστε τον δείκτη ως δείκτη κατάλληλο για το κλικ */
 }

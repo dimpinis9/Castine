@@ -83,32 +83,7 @@ main {
   box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3);
 }
 
-/* Παρουσίαση προϊόντος */
-.slideshow-container {
-  position: relative;
-  max-width: 1000px;
-  margin: auto;
-  margin-top: 10px;
-  z-index: 1;
-}
 
-.mySlides {
-  position: absolute;
-  display: none;
-  margin-top: 2rem;
-  width: 50%;
-  transform: translateX(100%);
-}
-
-.mySlides img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.showing {
-  display: block;
-}
 
 /* Σύνοψη προϊόντος */
 .product-summary {
@@ -219,31 +194,6 @@ main {
     font-size: 1rem;
     padding: 0.5rem 1rem;
   }
-
-  .slideshow-container {
-    position: relative;
-    max-width: 100%;
-    margin-top: 0;
-    overflow: hidden; /* Προσθήκη overflow για να κρύψει τις εικόνες εκτός οθόνης */
-  }
-
-  .mySlides {
-    position: absolute;
-    display: none;
-    margin-top: 0;
-    width: 100%;
-    transform: translateX(0);
-  }
-
-  .mySlides:first-child {
-    display: block; /* Εμφανίζεται μόνο η πρώτη εικόνα αρχικά */
-  }
-
-  .showing {
-    display: block !important; /* Εμφάνιση της εικόνας που έχει την κλάση showing */
-  }
-
-
 
   .product-summary {
     margin-top: 1rem;

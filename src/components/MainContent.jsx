@@ -1,9 +1,5 @@
 import React, { useEffect } from 'react';
 import '../assets/MainContent.css';
-import image1 from '../assets/images/image1.jpg';
-import image2 from '../assets/images/image2.jpg';
-import image3 from '../assets/images/image3.jpg';
-import { useNavigate } from 'react-router-dom';
 import { useSprings, animated } from 'react-spring';
 
 const AnimatedText = ({ text }) => {
@@ -30,39 +26,20 @@ const AnimatedText = ({ text }) => {
 };
 
 export const MainContent = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
-    const slides = document.querySelectorAll('.mySlides');
-    let currentSlide = 0;
-
-    slides[currentSlide].classList.add('showing');
-
-    const nextSlide = () => {
-      slides[currentSlide].classList.remove('showing');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('showing');
-    };
-
-    const slideInterval = setInterval(nextSlide, 3000);
-
-    return () => clearInterval(slideInterval);
+    // Εδώ μπορείτε να τοποθετήσετε κώδικα για την επεξεργασία του βίντεο
   }, []);
 
   return (
     <main>
       <div className="content-container">
-        <div className="slideshow-container">
-          <div className="mySlides fade">
-            <img src={image1} alt="Εικόνα 1" />
-          </div>
-          <div className="mySlides fade">
-            <img src={image2} alt="Εικόνα 2" />
-          </div>
-          <div className="mySlides fade">
-            <img src={image3} alt="Εικόνα 3" />
-          </div>
-        </div>
+        {/* Εδώ τοποθετήστε το βίντεο */}
+        <div style={{ width: '100%', overflow: 'hidden', height:'800px',marginTop: '-100px'}}>
+  <video autoPlay loop muted style={{ width: "100%", height: "auto" }}>
+    <source src="/src/assets/images/video.mp4" type="video/mp4" />
+   
+  </video>
+</div>
       </div>
       <div className="product-title">
         <h1>
