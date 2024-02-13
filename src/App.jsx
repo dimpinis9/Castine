@@ -27,7 +27,7 @@ function App() {
     <div className="App">
       {/* Εφαρμόζουμε την κατάλληλη κλάση στο καλωσόρισμα */}
       <div className={welcomeClass}>
-        Καλώς ήρθατε στην Ιστοσελίδα μας!
+        Με την εγγραφή σας, κερδίζετε 10% έκπτωση στην πρώτη σας αγορά!
       </div>
       <Header />
       <div className="content-container"> 
