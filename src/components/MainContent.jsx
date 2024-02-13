@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import '../assets/MainContent.css';
 import { useSprings, animated } from 'react-spring';
 
@@ -26,18 +26,35 @@ const AnimatedText = ({ text }) => {
 };
 
 export const MainContent = () => {
+  const [showHero, setShowHero] = useState(false);
   useEffect(() => {
-    // Εδώ μπορείτε να τοποθετήσετε κώδικα για την επεξεργασία του βίντεο
-  }, []);
+    const timeout = setTimeout(() => {
+      setShowHero(true);
+    }, 2000);
+
+
+  return () => clearTimeout(timeout);
+}, []);
 
   return (
     <main>
-      <div className="content-container">
-        {/* Εδώ τοποθετήστε το βίντεο */}
-        <div style={{ width: '100%', overflow: 'hidden', height: '80vh', marginTop: '-100px' }}>
-  <video autoPlay loop muted style={{ width: "100%", height: "100%", objectFit: "cover" }}>
-    <source src="/src/assets/images/video.mp4" type="video/mp4" />
-  </video>
+     
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',  height: '90vh', marginTop:'-100px' }}>
+      <div style={{ position: 'relative', width: '100%', overflow: 'hidden', maxWidth: '100%', maxHeight: '100%', }}>
+        <video autoPlay loop muted style={{ width: "100%", height: "100%", objectFit: "cover" }}>
+          <source src="/src/assets/images/video.mp4" type="video/mp4" />
+        </video>
+        {showHero && (
+          <div style={{ position: 'absolute', top: '50%', left: '40%', transform: 'translate(-50%, -50%)', width: '100%', opacity: 0.7, transition: 'opacity 1s ease-in-out' }}>
+            <section className="hero" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', opacity: 1 }}>
+              <div className="product-description">
+                <h1>Natural Dry Oil</h1>
+                <p>Φυσικό λάδι για τα μαλλιά και το δέρμα - το μυστικό ομορφιάς σας.</p>
+                <button onClick={() => navigate('/products')}>Ανακαλύψτε περισσότερα</button>
+              </div>
+            </section>
+          </div>
+      )}
 </div>
       </div>
       <div className="product-title">
@@ -45,13 +62,7 @@ export const MainContent = () => {
           <AnimatedText text="LOOK AMAZING AND FEEL AS FAB AS EVER" />
         </h1>
       </div>
-      <section className="hero">
-        <div className="product-description">
-          <h1>Natural Dry Oil</h1>
-          <p>Φυσικό λάδι για τα μαλλιά και το δέρμα - το μυστικό ομορφιάς σας.</p>
-          <button onClick={() => navigate('/products')}>Ανακαλύψτε περισσότερα</button>
-        </div>
-      </section>
+      
       <div className="product-summary">
         <h2>Συντόμη Περιγραφή Προϊόντος</h2>
         <p className="summary-text">
