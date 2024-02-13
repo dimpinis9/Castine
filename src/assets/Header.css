@@ -12,8 +12,16 @@ header {
   width: 100%;
 }
 
-.logo img {
+.logo{
   height: 60px;
+  
+}
+
+.logo h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-family: sans-serif;
+  font-weight: 200;
 }
 
 nav ul {
@@ -22,6 +30,7 @@ nav ul {
   display: flex;
   gap: 2rem;
   flex-direction: column; /* Αλλάξτε τον κατακόρυφο προσανατολισμό */
+
     padding: 1rem; 
 }
 
@@ -94,6 +103,22 @@ nav.open {
   display: block; /* Εμφανίστε το μενού όταν είναι ανοικτό */
 }
 
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.login-icon, .cart {
+  margin-left: 10px;
+}
+
+/* Στυλ για το εικονίδιο σύνδεσης (login) */
+.login-icon {
+  color: #007bff; /* Χρώμα του εικονιδίου */
+  font-size: 20px; /* Μέγεθος εικονιδίου */
+  cursor: pointer; /* Καθορίστε τον δείκτη ως δείκτη κατάλληλο για το κλικ */
+}
 /* Απόκριση σε μικρές οθόνες */
 @media only screen and (max-width: 600px) {
  
@@ -161,4 +186,20 @@ nav.open {
 .menu-icon {
   order: -1; /* Τοποθετήστε το πριν από το λογότυπο */
   margin-left: 1rem; /* Αφήστε κάποιο χώρο μεταξύ του εικονιδίου του μενού και του λογότυπου */
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.login-icon, .cart {
+  margin-left: 20px;
+}
+
+/* Στυλ για το εικονίδιο σύνδεσης (login) */
+.login-icon {
+  color: black; /* Χρώμα του εικονιδίου */
+  font-size: 20px; /* Μέγεθος εικονιδίου */
+  cursor: pointer; /* Καθορίστε τον δείκτη ως δείκτη κατάλληλο για το κλικ */
 }

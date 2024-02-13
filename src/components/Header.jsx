@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../assets/Header.css';
 import CartModal from './CartModal'; 
-import logo from '../assets/images/castine-logo.png'; // Εισαγωγή της εικόνας
 
 export const Header = () => {
   const [isCartModalOpen, setCartModalOpen] = useState(false);
@@ -18,7 +17,7 @@ export const Header = () => {
   return (
     <header>
       <div className="logo">
-        <img src={logo} alt="Logo" />
+         <h1>CASTINE</h1>
       </div>
       <nav className={isMenuOpen ? "open" : ""}>
         <ul>
@@ -31,10 +30,16 @@ export const Header = () => {
       <div className="menu-icon" onClick={() => setMenuOpen(!isMenuOpen)}>
         <i className={isMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
-      <div className="cart" onClick={openCartModal}>
-        <i className="fas fa-shopping-cart"></i>
+      <div className="header-icons"> {/* Προσθέστε αυτή την κλάση γύρω από τα εικονίδια */}
+        <a href="/login" className="login-icon">
+          <i className="fas fa-user"></i>
+        </a>
+        <div className="cart" onClick={openCartModal}>
+          <i className="fas fa-shopping-cart"></i>
+        </div>
       </div>
       <CartModal isOpen={isCartModalOpen} onRequestClose={closeCartModal} />
     </header>
   );
+  
 };
