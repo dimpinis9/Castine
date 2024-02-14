@@ -6,22 +6,23 @@ import { Footer } from './components/Footer';
 import  {About}  from './components/About';
 import  Product  from './components/Product';
 import ContactForm from './components/ContactForm';
+import Login from './components/Login';
 import './App.css';
 
 function App() {
   
-  const location = useLocation();
+  // const location = useLocation();
 
  
   let welcomeClass = 'welcome';
 
   
-  if (location.pathname === '/') {
-    welcomeClass += ' homepage';
-  } else {
+  // if (location.pathname === '/') {
+  //   welcomeClass += ' homepage';
+  // } else {
     
-    welcomeClass += ' hidden';
-  }
+  //   welcomeClass += ' hidden';
+  // }
 
   return (
     <div className="App">
@@ -52,6 +53,8 @@ function App() {
             </>
           } />
           <Route path="/contact" element={<ContactForm />} />
+
+          <Route path="/login" element={<Login />} />
         </Routes>
       
       </div>

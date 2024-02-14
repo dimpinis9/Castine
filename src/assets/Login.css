@@ -1,0 +1,84 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    max-width: 1100px; /* ή όποιο μέγεθος προτιμάτε */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden; /* Για να διατηρήσετε τις στρογγυλεμένες γωνίες */
+  }
+  
+  .card-image {
+    width: 50%; /* ή όποιο ποσοστό του πλάτους της κάρτας προτιμάτε */
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: auto;
+    display: block; /* Εξασφαλίζει ότι δεν θα υπάρχουν περιττά περιθώρια */
+  }
+  
+  .card-form {
+    width: 50%; /* ή όποιο ποσοστό του πλάτους της κάρτας προτιμάτε */
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%; /* Επιτρέπει στο κουμπί να γεμίζει το πλάτος της φόρμας */
+    margin-top: 10px; /* Προσθέτει λίγο περιθώριο πάνω από το κουμπί */
+  }
+  
+  button:hover {
+    background-color: #333; /* Σκούρο γκρι χρώμα για το hover effect */
+  }
+  
+  a {
+    display: block; /* Κάνει το link να παίρνει το πλάτος της φόρμας */
+    color: #333;
+    text-decoration: none;
+    margin-top: 10px; /* Προσθέτει λίγο περιθώριο πάνω από το link */
+    text-align: center; /* Κεντράρει το κείμενο του link */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Προσθέτει υπογράμμιση στο hover effect */
+  }
+  
+  /* Εάν θέλετε να προσθέσετε μια ανταπόκριση για μικρότερες οθόνες */
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+    }
+  
+    .card-image, .card-form {
+      width: 100%;
+    }
+  }
+  
