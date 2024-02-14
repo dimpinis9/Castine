@@ -39,7 +39,7 @@ export const MainContent = () => {
   return (
     <main>
      
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',  height: '90vh', marginTop:'-100px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight:'5%', height: '90vh', marginTop:'-100px' }}>
       <div style={{ position: 'relative', width: '100%', overflow: 'hidden', maxWidth: '100%', maxHeight: '100%', }}>
         <video autoPlay loop muted style={{ width: "100%", height: "100%", objectFit: "cover" }}>
           <source src="/src/assets/images/video.mp4" type="video/mp4" />

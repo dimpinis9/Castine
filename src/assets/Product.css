@@ -1,117 +1,192 @@
-/* Γενικός στυλ για τη σελίδα */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    overflow-x: hidden;
-    
-  }
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+
+}
+
+.product-carousel, .how-to-use-container {
+  grid-column: 1;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
   
-  .product-details {
-    max-width: 2000px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .product-details h1 {
-    font-size: 32px;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  .product-introduction {
-    margin-bottom: 20px; 
-    line-height: 1.5;
-    border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); 
-  padding: 15px; 
+  height: 50%;
+  width: 70%;
+  margin-top: 10%;
+}
+
+.product-details h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-left: 4%;
+}
+
+.product-price {
+  font-size: 1.5em;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.add-to-cart-button {
+  font-size: 1em;
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.add-to-cart-button:hover {
+  background-color: grey;
+}
+
+.product-carousel {
+  width: 60%; /* Ρυθμίστε το ποσοστό σύμφωνα με τις ανάγκες σας */
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-left: 10%; 
+  height: 20%;/* Ρυθμίστε την απόσταση από το δεξί σύμφωνα με τις ανάγκες σας */
+}
+.carousel .slide {
+  background: none;
+  border: none;
+ 
+}
+
+.carousel .thumb {
+  border: none;
+}
+
+.carousel .control-arrow {
+  filter: invert(100%);
+}
+
+.how-to-use-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 20px;
   border-radius: 10px;
-    
-  }
-  
-  .product-info {
-    line-height: 1.5;
-  }
-  
-  .product-info h2 {
-    font-size: 24px;
-    margin-top: 20px; 
-    margin-bottom: 10px; 
-  }
-  
-  .product-info p {
-    margin-bottom: 10px; 
-  }
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  margin-top: 5%;
+  margin-left: 20%;
+  width: 1300px;
+  height: 70%;
   
 
-  .product-introduction button {
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    background-color:BLACK;
-    color: WHITE; 
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(29, 19, 8, 0.3); 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    font-family: cursive;
-    margin-top: 20px; 
-  }
+}
+
+.how-to-use-content {
+  flex: 1;
+  margin-right: 20px;
   
-  .product-introduction button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(233, 227, 221, 0.5); 
-  }
-  
-  .product-introduction button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3); 
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 20%;
+}
+
+.usage-steps {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card {
+  grid-row: 3; 
+  border: 1px solid #ccc;
+  justify-content: center;
+  align-items: center;
+  margin-left: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 100%; 
+  margin-top: -40px;
+}
+
+.card-content {
+  padding: 30px;
+}
+
+
+@media (max-width: 768px) {
+  .product-container {
+    grid-template-columns: 1fr;
   }
 
-  .carousel-root {
-    width: 500px;
-    margin: 0 auto;
-    
-  }
-  
-  .carousel img {
-    max-width: 100%; 
-    height: 50%;
-    
+  .product-carousel, .how-to-use-container {
+    margin: 0;
+    width: 100%;
   }
 
-  @media screen and (max-width: 600px) {
-    .product-details {
-      max-width: 100%;
-      padding: 10px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    }
-  
-    .product-details h1 {
-      font-size: 24px;
-    }
-  
-    .product-introduction {
-      padding: 10px;
-    }
-  
-    .product-info h2 {
-      font-size: 20px;
-    }
-  
-    .product-introduction button {
-      font-size: 0.8rem;
-      padding: 0.8rem 1.6rem;
-      box-shadow: 0 2px 4px rgba(29, 19, 8, 0.3);
-    }
-  
-    .carousel-root {
-      width: 100%;
-    }
-  
-    .carousel img {
-      height: auto;
-    }
+  .product-details {
+    width: 100%;
+    margin-top: 5%;
   }
+
+  .product-details h1 {
+    font-size: 1.5em;
+  }
+
+  .product-description {
+    font-size: 0.8em;
+    margin-left: 2%;
+  }
+
+  .product-price {
+    font-size: 1.2em;
+  }
+
+  .add-to-cart-button {
+    padding: 8px 16px;
+  }
+
+  .how-to-use-container {
+    flex-direction: row; /* Αλλαγή από column σε row */
+    flex: 1;
+    padding: 10px;
+    margin-left: 0;
+    width: 100%; /* Αλλαγή από 50% σε 100% */
+   height: auto;
+  }
+
+  .how-to-use-content, .image-container {
+    flex: 1;
+  }
+
+  .image-container img {
+    margin-left: 0;
+  }
+
+  .card {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
