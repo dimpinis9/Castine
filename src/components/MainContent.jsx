@@ -58,9 +58,14 @@ export const MainContent = () => {
 </div>
       </div>
       <div className="product-title">
-        <h1>
-          <AnimatedText text="LOOK AMAZING AND FEEL AS FAB AS EVER" />
+        <h1 class="deserve">
+          
+          <AnimatedText text="YOU DESERVE IT"/>
         </h1>
+        <h2 class="stay"><AnimatedText text="STAY BEAUTIFUL"  /></h2>
+        <h2 class="inside"><AnimatedText text="INSIDE AND OUTSIDE" /> </h2>
+
+        
       </div>
       
       <div className="product-summary">

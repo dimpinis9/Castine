@@ -21,10 +21,10 @@ export const Header = () => {
       </div>
       <nav className={isMenuOpen ? "open" : ""}>
         <ul>
-          <li><a href="/">Αρχική</a></li>
-          <li><a href="/products">Το Προϊόν</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/contact">Επικοινωνία</a></li>
+          <li><a href="/">ΑΡΧΙΚΗ</a></li>
+          <li><a href="/products">ΠΡΟΙΟΝ</a></li>
+          <li><a href="/about">ABOUT US</a></li>
+          <li><a href="/contact">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
         </ul>
       </nav>
       <div className="menu-icon" onClick={() => setMenuOpen(!isMenuOpen)}>
