@@ -46,7 +46,7 @@ export const MainContent = () => {
         </video>
         {showHero && (
           <div style={{ position: 'absolute', top: '50%', left: '40%', transform: 'translate(-50%, -50%)', width: '100%', opacity: 0.7, transition: 'opacity 1s ease-in-out' }}>
-            <section className="hero" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', opacity: 1 }}>
+            <section className="hero" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', opacity: 0 }}>
               <div className="product-description">
                 <h1>Natural Dry Oil</h1>
                 <p>Φυσικό λάδι για τα μαλλιά και το δέρμα - το μυστικό ομορφιάς σας.</p>

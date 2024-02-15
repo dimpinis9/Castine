@@ -38,8 +38,8 @@ code {
 
 .welcome {
   
-  background-color: white;
-  color: #333;
+  background-color: black;
+  color: white;
   padding: 1rem;
   text-align: center;
   font-family: sans-serif;
@@ -58,4 +58,10 @@ code {
   display: none;
 }
 
+
+@media (max-width: 768px) {
+  .welcome {
+    font-size: 0.6rem;
+  }
+}
 

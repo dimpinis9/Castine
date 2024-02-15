@@ -123,7 +123,7 @@
   border: 1px solid #ccc;
   justify-content: center;
   align-items: center;
-  margin-left: 250px;
+  margin-left: 300px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   width: 100%; 
@@ -132,6 +132,7 @@
 
 .card-content {
   padding: 30px;
+  
 }
 
 
