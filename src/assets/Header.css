@@ -12,18 +12,9 @@ header {
   width: 100%;
 }
 
-.logo{
-  height: 60px;
-  font-weight: 200;
-  
-}
 
-.logo h1 {
-  font-size: 2rem;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  font-family: sans-serif;
-  font-weight: 00;
+.logo img {
+  height: 30px;
 }
 
 nav ul {
@@ -143,7 +134,7 @@ nav.open {
   }
 
   .logo img {
-    height: 40px; /* Μικρότερο μέγεθος λογότυπου για μικρές οθόνες */
+    height: 20px; /* Μικρότερο μέγεθος λογότυπου για μικρές οθόνες */
   }
 
   .menu-icon {
@@ -160,9 +151,20 @@ nav.open {
     background-color: #fbf9ed; /* Βασικό χρώμα φόντου */
     z-index: 999; /* Καθορίστε ένα υψηλό z-index για να είναι πάνω από όλα τα άλλα στοιχεία */
   }
+  .open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; 
+    height: 100vh;
+    background-color: #fff; 
+    overflow: auto;
+    z-index: 1000;
+  }
 
   nav.open {
-    display: block; /* Εμφανίστε το μενού όταν είναι ανοικτό */
+    display: block; 
+    width: 100%; /* Εμφανίστε το μενού όταν είναι ανοικτό */
   }
 
   nav ul {
@@ -178,6 +180,22 @@ nav.open {
 }
   nav ul li a {
     font-size: 0.9rem; /* Μικρότερο μέγεθος γραμματοσειράς για μικρές οθόνες */
+  }
+  nav ul li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #333; /* Χρώμα κειμένου */
+  }
+  
+  nav ul li button:hover {
+    background-color: #f0f0f0;
+    color:#ca9613 ; /* Αλλαγή χρώματος κατά το hover */
+  }
+  
+  nav ul li button i {
+    font-size: 20px;
   }
 
   .cart img {
