@@ -3,6 +3,9 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../assets/Product.css';
 import Modal from 'react-modal';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+
 
 Modal.setAppElement('#root');
 
@@ -65,27 +68,29 @@ const Product = () => {
 const HowToUseSection = () => {
   return (
     <div className="how-to-use-container">
-  <div className="how-to-use-content">
-    <h2>ΟΔΗΓΙΕΣ ΧΡΗΣΗΣ</h2>
-    <div className="steps">
-      <p>Νωπά και στεγνά μαλλιά</p>
-      <p>
-Απλώστε μερικές σταγόνες στις παλάμες σας και τρίψτε τα χέρια σας μέχρι να απλωθεί το προϊόν στις παλάμες και τα δάχτυλα σας. Στη συνέχεια, χρησιμοποιήστε τα δάχτυλα σας με μια κίνηση χτενίσματος για να κατανείμετε ομοιόμορφα το προϊόν από το μεσαίο μήκος έως τις άκρες.
-Σε νωπά μαλλιά βοηθάει στο ξεμπέρδεμα και στο styling.
-Σε στεγνά μαλλια βοηθάει στον έλεγχο του φριζαρίσματος και δίνει λάμψη.
-Ιδανικά κάθε φορά που κάνετε εφαρμογή είτε σε νωπά είτε σε στεγνά μαλλιά,αν το επιτρέπει το χτένισμα,προχωρήστε σε ένα πέρασμα με τη χτένα για ομοιόμορφη κατανομή του προϊόντος και δώστε λίγα λεπτά να απορροφηθεί. Το χτένισμα να γίνετε πάντα από κάτω προς τα πάνω και σε ελαφρώς νωπά ή στεγνά  μαλλιά για να αποφευχθεί το σπάσιμο της τρίχας.
-</p> 
+    <div className="how-to-use-content">
+      <h2>ΟΔΗΓΙΕΣ ΧΡΗΣΗΣ</h2>
+      <Tabs>
+        <div className="tabsbtn">
+          <Tab>Νωπά μαλλιά</Tab>
+          <Tab>Στεγνά μαλλιά</Tab>
+          </div>
+        <TabPanel>
+          <p>Εδώ θα πάει η περιγραφή για τα νωπά μαλλιά...</p>
+        </TabPanel>
+        <TabPanel>
+          <p>Εδώ θα πάει η περιγραφή για τα στεγνά μαλλιά...</p>
+        </TabPanel>
+      </Tabs>
+      <div className="complete-routine">
+        <h3>ΚΑΘΗΜΕΡΙΝΗ ΧΡΗΣΗ</h3>
+        <p>Η καθημερινή ρουτίνα είναι σημαντική για τα μέγιστα αποτελέσματα.</p>
+      </div>
     </div>
-    <div className="complete-routine">
-      <h3>ΚΑΘΗΜΕΡΙΝΗ ΧΡΗΣΗ</h3>
-      <p>Η καθημερινή ρουτίνα είναι σημαντική για τα μέγιστα αποτελέσματα.</p>
-      
+    <div className="image-container">
+      <img src="/src/assets/images/image2.jpg" alt="" />
     </div>
   </div>
-  <div className="image-container">
-    <img src="/src/assets/images/image2.jpg" alt="" />
-  </div>
-</div>
     
   );
 };

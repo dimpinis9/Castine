@@ -135,6 +135,32 @@
   
 }
 
+/* Στυλ για κάθε tab */
+.react-tabs__tab {
+  padding: 10px 20px;
+  background:#fbf9ed;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+.tabsbtn .react-tabs__tab {
+  margin-right: 60px;
+}
+
+.react-tabs__tab--selected {
+  background: #007BFF !important; 
+  color: #fff !important; 
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+/* Στυλ για το περιεχόμενο κάθε tab */
+.react-tabs__tab-panel {
+  padding: 20px;
+  background: #fff;
+  
+  border-radius: 5px;
+}
+
 
 @media (max-width: 768px) {
   .product-container {
@@ -179,10 +205,12 @@
     margin-left: 0;
     width: 100%; /* Αλλαγή από 50% σε 100% */
    height: auto;
+   display: block;
   }
 
   .how-to-use-content, .image-container {
     flex: 1;
+    width: 100%;
   }
 
   .image-container img {
@@ -194,4 +222,9 @@
     width: 100%;
     margin-bottom: 5px;
   }
+
+  .how-to-use-container {
+    display: block;
+  }
+
 }
