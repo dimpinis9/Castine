@@ -91,7 +91,7 @@
   margin-top: 5%;
   margin-left: 20%;
   width: 1300px;
-  height: 70%;
+  height: 80%;
   
 
 }
@@ -110,7 +110,7 @@
 .image-container img {
   max-width: 100%;
   height: auto;
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 .usage-steps {
@@ -160,6 +160,13 @@
   
   border-radius: 5px;
 }
+
+.tabsbtn1 .react-tabs__tab {
+  margin-right: 50px;
+}
+
+
+
 
 
 @media (max-width: 768px) {
