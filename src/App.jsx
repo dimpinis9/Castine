@@ -7,6 +7,7 @@ import  {About}  from './components/About';
 import  Product  from './components/Product';
 import ContactForm from './components/ContactForm';
 import Login from './components/Login';
+import ReturnPolicy from './components/ReturnPolicy';
 import './App.css';
 
 function App() {
@@ -55,6 +56,9 @@ function App() {
           <Route path="/contact" element={<ContactForm />} />
 
           <Route path="/login" element={<Login />} />
+
+          <Route path="/returnPolicy" element={<ReturnPolicy />} />
+
         </Routes>
       
       </div>

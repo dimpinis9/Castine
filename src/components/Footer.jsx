@@ -8,6 +8,7 @@ const links = [
   { href: "/about", text: "Σχετικά" },
   { href: "/products", text: "Προϊόντα" },
   { href: "/contact", text: "Επικοινωνία" },
+  { href: "/returnPolicy", text: "Πολιτική Επιστροφών" },
 ];
 
 const socials = [
