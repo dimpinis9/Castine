@@ -29,15 +29,15 @@ const AnimatedText = ({ text }) => {
   );
 };
 
-const imageUrls = [productImage1, productImage2, productImage3, productImage4
-];
+const imageUrls = [productImage1, productImage2, productImage3, productImage4];
 
 export const MainContent = () => {
-  const [showHero, setShowHero] = useState(false);
+  const [showHero, setShowHero] = useState(true);
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
+      console.log(showHero);
       setShowHero(true);
     }, 2000);
 
@@ -79,12 +79,12 @@ export const MainContent = () => {
   <p>Εφαρμόστε μετά το ντουζ σε νωπή επιδερμίδα για καλύτερα αποτελέσματα.</p>
 </div>
       <div className="product-title">
-        <h1 class="deserve">
+        <h1 className="deserve">
           
           <AnimatedText text="YOU DESERVE IT"/>
         </h1>
-        <h2 class="stay"><AnimatedText text="STAY BEAUTIFUL"/></h2>
-        <h2 class="inside"><AnimatedText text="INSIDE AND OUTSIDE" /> </h2>
+        <h2 className="stay"><AnimatedText text="STAY BEAUTIFUL"/></h2>
+        <h2 className="inside"><AnimatedText text="INSIDE AND OUTSIDE" /> </h2>
 
         
       </div>
