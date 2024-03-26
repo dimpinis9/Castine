@@ -96,22 +96,6 @@ main {
   margin-top: 10px; /* Αυξήστε αυτήν την τιμή για να αυξήσετε το μέγεθος των γραμμάτων */
 }
 
-
-
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
 img {
   width: 100%; /* Κάνει τις εικόνες να ταιριάζουν στο πλάτος του γονικού τους στοιχείου */
   height: auto; /* Διατηρεί τις αναλογίες της εικόνας */
@@ -156,7 +140,27 @@ img {
   line-height: 1.5; 
 }
 
-/* Προσθέστε εδώ περισσότερο περιεχόμενο και φωτογραφίες */
+.OrderButton button {
+  font-size: 1rem; /* Καθορίζει το μέγεθος του κειμένου */
+  padding: 12px 24px; 
+  margin-top: 2rem;/* Προσθέτει εσωτερικό περιθώριο για να κάνει το κουμπί μεγαλύτερο */
+  background-color: black;/* Καθορίζει το χρώμα φόντου */
+  color: white; /* Καθορίζει το χρώμα του κειμένου */
+  border: none; /* Αφαιρεί το περίγραμμα */
+  border-radius: 5px; /* Προσθέτει ελαφριά στρογγυλεμένες γωνίες */
+  cursor: pointer; /* Αλλάζει τον δείκτη του ποντικιού σε δείκτη κλικ όταν είναι πάνω από το κουμπί */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Προσθέτει απαλή μετάβαση για το χρώμα και τη μετατόπιση */
+}
+
+.OrderButton button:hover {
+  background-color: black; /* Σκουραίνει το χρώμα του κουμπιού όταν γίνεται hover */
+  transform: translateY(-2px); /* Ανεβάζει λίγο το κουμπί για να δώσει αίσθηση διαδραστικότητας */
+}
+
+.OrderButton button:active {
+  background-color: black; /* Κάνει το κουμπί ακόμη σκουρότερο όταν πατιέται */
+  transform: translateY(1px); /* Επαναφέρει το κουμπί στην αρχική του θέση όταν γίνεται κλικ */
+}
 
 @media only screen and (max-width: 600px) {
   body {
@@ -223,6 +227,12 @@ img {
 
 img {
   object-fit: contain; /* Αλλαγή του object-fit για μικρότερες συσκευές για να δείχνει ολόκληρη η εικόνα */
+}
+
+.OrderButton button { 
+  margin-top: 1rem; /* Αύξηση του περιθωρίου για καλύτερη εμφάνιση */
+  padding: 0.5rem 1rem; /* Μείωση του padding για καλύτερη εμφάνιση */
+  width: 50%; /* Καθορίζει το πλάτος του κουμπιού */
 }
 
 
