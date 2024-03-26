@@ -27,61 +27,6 @@ main {
   margin-top: 7rem;
 }
 
-/* Περιγραφή προϊόντος */
-.product-description {
-  color: black;
-  display: inline-block;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 30px;
-  background-color: rgba(233, 227, 221, 0.8);
-  font-family: sans-serif;
-  margin-left: 30%;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 2;
-  text-align: center; /* Κείμενο κεντρικά */
-}
-
-.product-description h1,
-.product-description h2,
-.product-description p {
-  margin-bottom: 1rem;
-}
-
-.product-description h1 {
-  font-size: 3rem;
-}
-
-.product-description h2 {
-  font-size: 2rem;
-}
-
-.product-description p {
-  font-size: 1.5rem;
-}
-
-.product-description button {
-  font-size: 1rem;
-  padding: 1rem 2rem;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(29, 19, 8, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: sans-serif;
-}
-
-.product-description button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(233, 227, 221, 0.5);
-}
-
-.product-description button:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3);
-}
 
 
 
@@ -152,6 +97,65 @@ main {
 }
 
 
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+img {
+  width: 100%; /* Κάνει τις εικόνες να ταιριάζουν στο πλάτος του γονικού τους στοιχείου */
+  height: auto; /* Διατηρεί τις αναλογίες της εικόνας */
+  object-fit: cover; /* Καλύπτει το διαθέσιμο πλάτος και ύψος, διατηρώντας τις αναλογίες */
+}
+
+/* Ρυθμίσεις για τον container των εικόνων */
+.image-container img {
+  height: 300px; /* Ή οποιαδήποτε τιμή προτιμάτε */
+  width: auto;
+  object-fit: contain; /* Εξασφαλίζει ότι η εικόνα θα διατηρήσει τις αναλογίες της */
+  margin: 0 auto; /* Κεντράρει την εικόνα στον διαθέσιμο χώρο */
+}
+
+.image-container {
+  width: 100%; /* Εξασφαλίζει ότι ο container των εικόνων καλύπτει το πλάτος του παραθύρου/γονικού */
+  display: flex; /* Χρήση του flex για καλύτερη διαχείριση του layout */
+  justify-content: center; /* Κεντράρει τις εικόνες οριζόντια */
+  align-items: center; /* Κεντράρει τις εικόνες κατακόρυφα */
+  overflow: hidden; /* Κρύβει τυχόν περιεχόμενο που ξεπερνάει τα όρια του container */
+}
+
+.oils-introduction-card {
+ 
+  background-color: #fbf9ed; /* Ή οποιοδήποτε χρώμα ταιριάζει με τον σχεδιασμό σας */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 4rem;
+ 
+  width: 100%; /* Εξασφαλίζει ότι η κάρτα προσαρμόζεται στο πλάτος του γονικού της στοιχείου */
+  text-align: center; /* Κεντράρει το κείμενο μέσα στην κάρτα */
+  
+}
+
+.oils-introduction-card h2 {
+  margin-bottom: 1rem;
+}
+
+.oils-introduction-card p {
+  margin-bottom: 1rem;
+  line-height: 1.5; 
+}
+
 /* Προσθέστε εδώ περισσότερο περιεχόμενο και φωτογραφίες */
 
 @media only screen and (max-width: 600px) {
@@ -182,28 +186,6 @@ main {
     order: 2;
   }
 
-  .product-description {
-    margin-left: 0;
-    padding: 10px;
-    margin-top: 15px;
-  }
-
-  .product-description h1 {
-    font-size: 2rem;
-  }
-
-  .product-description h2 {
-    font-size: 2rem;
-  }
-
-  .product-description p {
-    font-size: 1rem;
-  }
-
-  .product-description button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
 
   .product-summary {
     margin-top: 1rem;
@@ -233,6 +215,14 @@ main {
     display: inline-block;
  border-bottom: 0.5px solid;
     
+}
+
+.image-container img {
+  height: 150px; /* Περαιτέρω μείωση για κινητά τηλέφωνα */
+}
+
+img {
+  object-fit: contain; /* Αλλαγή του object-fit για μικρότερες συσκευές για να δείχνει ολόκληρη η εικόνα */
 }
 
 
