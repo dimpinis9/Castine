@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/MainContent.css';
 import { useSprings, animated } from 'react-spring';
+import productImage1 from '../assets/images/image1.JPG';
+import productImage2 from '../assets/images/image2.JPG';
+import productImage3 from '../assets/images/image3.JPG';
+import productImage4 from '../assets/images/image4.JPG';
 
 const AnimatedText = ({ text }) => {
   const characters = text.split('');
@@ -25,12 +29,7 @@ const AnimatedText = ({ text }) => {
   );
 };
 
-const imageUrls = [
-  '/src/assets/images/image1.JPG',
-  '/src/assets/images/image2.JPG',
-  '/src/assets/images/image3.JPG',
-  '/src/assets/images/image4.JPG',
-  // Προσθέστε εδώ τις δικές σας εικόνες
+const imageUrls = [productImage1, productImage2, productImage3, productImage4
 ];
 
 export const MainContent = () => {
