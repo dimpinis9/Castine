@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/MainContent.css';
 import { useSprings, animated } from 'react-spring';
-import productImage1 from '../assets/images/image1.JPG';
-import productImage2 from '../assets/images/image2.JPG';
-import productImage3 from '../assets/images/image3.JPG';
-import productImage4 from '../assets/images/image4.JPG';
+import productImage1 from '../assets/images/image1.jpg';
+import productImage2 from '../assets/images/image2.jpg';
+import productImage3 from '../assets/images/image3.jpg';
+import productImage4 from '../assets/images/image4.jpg';
 
 const AnimatedText = ({ text }) => {
   const characters = text.split('');
