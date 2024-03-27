@@ -75,7 +75,7 @@ export const MainContent = () => {
  </div>
     <div>
       <img src={productImage1} alt="Product" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
-      <h1>ΔΣΔΑΔΑ</h1>
+      <h1>LALALA</h1>
     </div>
 <div className="oils-introduction-card">
   <h2>Το CASTINE dry oil</h2>
