@@ -1,37 +1,45 @@
 /* Στυλ για τους τίτλους */
-h2 {
-  color: #333; /* Ροζ χρώμα για τους τίτλους */
-  font-size: 24px; /* Μέγεθος γραμματοσειράς */
-  font-weight: bold; /* Ένταση γραμματοσειράς */
-  margin-bottom: 10px; /* Απόσταση από τα κάτω */
+.return-policy-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Στυλ για τις επικεφαλίδες παραγράφων */
-h3 {
-  color: #333; /* Μαύρο χρώμα για τις επικεφαλίδες παραγράφων */
-  font-size: 18px; /* Μέγεθος γραμματοσειράς */
-  font-weight: bold; /* Ένταση γραμματοσειράς */
-  margin-bottom: 5px; /* Απόσταση από τα κάτω */
+.policy-title {
+  font-size: 24px;
+  text-align: center;
 }
 
-/* Στυλ για το κείμενο */
-p {
-  color: #666; /* Γκρι χρώμα για το κείμενο */
-  font-size: 16px; /* Μέγεθος γραμματοσειράς */
-  line-height: 1.6; /* Μεγέθυνση γραμματοσειράς */
-  margin-bottom: 15px; /* Απόσταση από τα κάτω */
+.section-title {
+  font-size: 20px;
+  margin-top: 20px;
 }
 
-/* Στυλ για τις λίστες */
-ul {
-  color: #666; /* Γκρι χρώμα για το κείμενο */
-  font-size: 16px; /* Μέγεθος γραμματοσειράς */
-  line-height: 1.6; /* Μεγέθυνση γραμματοσειράς */
-  margin-bottom: 15px; /* Απόσταση από τα κάτω */
-  margin-left: 20px; /* Αριστερό περιθώριο */
+.additional-note {
+  font-style: italic;
 }
 
-/* Στυλ για τα list items */
-li {
-  margin-bottom: 5px; /* Απόσταση από τα κάτω */
+.thank-you-note {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signature {
+  text-align: center;
+}
+
+/* Responsive στυλ */
+@media (max-width: 600px) {
+  .return-policy-container {
+    padding: 10px;
+  }
+  
+  .policy-title {
+    font-size: 20px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+  }
 }

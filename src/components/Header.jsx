@@ -18,7 +18,9 @@ export const Header = () => {
   return (
     <header>
       <div className="logo">
-      <img src={logo} alt="" />
+      <a href="/">
+    <img src={logo} alt="Castine logo" />
+  </a>
       </div>
       <nav className={isMenuOpen ? "open" : ""}>
         <ul>

@@ -31,87 +31,44 @@ img {
   object-fit: cover; /* Αν θέλετε να καλύψει ολόκληρη την περιοχή, αλλά μπορεί να περικόψει την εικόνα */
 }
 
-/* Hero section */
 .hero {
-  width: 60%; /* Μειώνει το πλάτος για να μην καλύπτει πολύ μεγάλο μέρος της σελίδας */
-  margin-left: 20%; /* Μετατοπίζει το κείμενο προς τα δεξιά */
+  width: 60%;
+  margin-left: 20%;
 }
 
 
 
 /* Τίτλος προϊόντος */
 .product-title {
-  margin-bottom: 4rem;
-  margin-top: 7rem;
-}
-
-
-/* Σύνοψη προϊόντος */
-.product-summary {
-  margin-top: 2rem;
-  background-color: #fbf9ed;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  color: #FFF;
   text-align: center;
-  position: relative;
+  width: 80%;
+  padding: 20px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  border-radius: 10px;
   z-index: 2;
 }
 
-.summary-title,
-.summary-price {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
+/* Προσθέστε custom styles για τον κάθε τύπο τίτλου */
+.deserve, .stay, .inside {
+  display: block; /* Τα κάνει να εμφανίζονται σε νέα γραμμή */
+  margin: 0.5em 0; /* Προσθέτει λίγο margin γύρω από κάθε τίτλο */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
-.summary-text {
-  font-size: 18px;
-  color: #555;
-  line-height: 1.5;
-}
-
-.summary-text::after {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 2px;
-  background-color: #333;
-  margin: 20px auto;
-}
-
-.product-summary button {
-  font-size: 1rem;
-  padding: 1rem 2rem;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(29, 19, 8, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: sans-serif;
-}
-
-.product-summary button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(233, 227, 221, 0.5);
-}
-
-.product-summary button:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(233, 227, 221, 0.3);
-}
-
 
 .deserve {
-  margin-top: -60px; /* Αυξήστε ή μειώστε αυτήν την τιμή ανάλογα με το πόσο πάνω θέλετε να μετακινήσετε το "deserve" */
+  font-size: 3rem !important;  /* Μεγαλύτερη γραμματοσειρά για τον κύριο τίτλο */
+  font-weight: bold;
 }
 
-.stay {
-  font-size: 2em;
-  margin-top: 10px; /* Αυξήστε αυτήν την τιμή για να αυξήσετε το μέγεθος των γραμμάτων */
+.stay, .inside {
+  font-size: 2.2rem; /* Μικρότερη γραμματοσειρά για τους υποτίτλους */
 }
-/* Ρυθμίσεις για τον container των εικόνων */
+
 
 
 .oils-introduction-card {
@@ -121,19 +78,21 @@ img {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 4rem;
- 
   width: 100%; /* Εξασφαλίζει ότι η κάρτα προσαρμόζεται στο πλάτος του γονικού της στοιχείου */
   text-align: center; /* Κεντράρει το κείμενο μέσα στην κάρτα */
   
 }
 
 .oils-introduction-card h2 {
-  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Αυξάνει το μέγεθος της γραμματοσειράς του τίτλου */
+  font-weight: bold; /* Κάνει τον τίτλο πιο έντονο */
+  margin-bottom: 15px; /* Διαχωρισμός μεταξύ τίτλου και παραγράφου */
 }
 
 .oils-introduction-card p {
-  margin-bottom: 1rem;
-  line-height: 1.5; 
+  font-size: 1rem; /* Ρυθμίζει το μέγεθος της γραμματοσειράς για τις παραγράφους */
+  line-height: 1.6; /* Βελτιώνει την αναγνωσιμότητα αυξάνοντας την απόσταση μεταξύ των γραμμών */
+  margin-bottom: 10px; /* Διαχωρισμός μεταξύ παραγράφων */
 }
 
 .OrderButton button {
@@ -183,66 +142,27 @@ img {
     width: 100%;
     margin-left: 0;
   }
-
+    
+  .image-oil-card {
+    width: 100%; /* Καμία ανάγκη για 'vw' στο responsive layout */
+    margin: 0; /* Βεβαιωθείτε ότι δεν υπάρχει margin */
+  }
   .content-container {
     display: flex;
     flex-direction: column;
   }
-
- 
-  .product-title {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    order: 2;
-  }
-
-
-  .product-summary {
-    margin-top: 1rem;
-  }
-
-  .summary-title {
-    font-size: 12px;
-  }
-
-  .summary-text {
-    font-size: 15px;
-  }
-
-  .summary-price {
-    font-size: 12px;
-  }
-
-  .product-summary button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .deserve {
-    margin-top: -160px;
-    font-size: 1.4rem;
-    font-weight: 200;
-    display: inline-block;
- border-bottom: 0.5px solid;
-    
-}
 
 .OrderButton button { 
   margin-top: 1rem; /* Αύξηση του περιθωρίου για καλύτερη εμφάνιση */
   padding: 0.5rem 1rem; /* Μείωση του padding για καλύτερη εμφάνιση */
   width: 50%; /* Καθορίζει το πλάτος του κουμπιού */
 }
+.oils-introduction-card h2 {
+  text-align: center; /* Κεντράρει τον τίτλο σε μικρές συσκευές */
+  font-size: 1.2rem; /* Αυξάνει το μέγεθος της γραμματοσειράς για καλύτερη αναγνωσιμότητα */
+  margin: 20px 0; /* Προσθέτει περισσότερο περιθώριο στο πάνω και κάτω μέρος */
+}
 
 
-  .stay {
-    font-size: 2em;
-    margin-top: 15px; 
-    font-weight: 200; /* Αυξήστε αυτήν την τιμή για να αυξήσετε το μέγεθος των γραμμάτων */
-  }
 
-  .inside{
-    font-size: 2em;
-    font-weight: 200; 
-    margin-top: -10px;
-  }
 }

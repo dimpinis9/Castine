@@ -10,29 +10,17 @@ import 'react-tabs/style/react-tabs.css';
 Modal.setAppElement('#root');
 
 // Εισάγετε τις εικόνες
-import productImage1 from '../assets/images/image5.JPG';
-import productImage2 from '../assets/images/image6.JPG';
+import productImage1 from '../assets/images/image9.JPG';
+import productImage2 from '../assets/images/image10.JPG';
 import productImage3 from '../assets/images/image7.JPG';
 import productImage4 from '../assets/images/image8.JPG';
 
 const Product = () => {
-  // Λεπτομέρειες του προϊόντος
-  const product = {
-    name: 'Φυσικό λάδι για τα μαλλιά και το δέρμα',
-    description:
-      'Αυτό το προϊόν περιέχει μια μοναδική φόρμουλα που ενυδατώνει τα μαλλιά σας και προσφέρει απαλότητα στο δέρμα. Ανακαλύψτε τα οφέλη τώρα!',
-    price: 19.99,
-  };
-
-  // Συνάρτηση για προσθήκη στο καλάθι
-  const addToCart = () => {
-    // Εδώ μπορείτε να προσθέσετε τη λογική για προσθήκη στο καλάθι
-  };
 
   return (
     <div className="product-container">
       <div className="product-carousel">
-        <Carousel showArrows={true} showThumbs={true}>
+        <Carousel showArrows={false} showThumbs={true}>
           <div>
             <img src={productImage1} alt="Εικόνα 1" />
           </div>
@@ -46,18 +34,23 @@ const Product = () => {
             <img src={productImage4} alt="Εικόνα 4" />
           </div>
         </Carousel>
+        
       </div>
-      <div className="product-details">
-        <h1>{product.name}</h1>
-        <p className="product-description">{product.description}</p>
-        <p className="product-price">Τιμή: {product.price}€</p>
-        <button className="add-to-cart-button" onClick={addToCart}>
-          Προσθήκη στο Καλάθι
-        </button>
+      <div className="oils-introduction-grid">
+      <div className="oils-introduction-card">
+        <h2>Το CASTINE dry oil</h2>
+        <p>Είναι ένα σύμπλεγμα φυσικών ελαίων άμεσης απορρόφησης που προσφέρει ακαταμάχητη λάμψη και άρωμα. Τα ελαια και τα λιπαρά που παράγει η επιδερμίδα συμβάλουν στην προστασία και την εξισορρόπηση του προστατευτικού φραγμού της αλλά συχνά, λόγω καιρικών συνθηκών, λάθος πρακτικών περιποίησης, το πέρασμα των ετών, η παραγωγή τους μειώνεται και τότε το δέρμα αρχίζει να αφυδατώνεται.</p>
+        <p>Εφαρμόστε μετά το ντουζ σε νωπή επιδερμίδα για καλύτερα αποτελέσματα.</p>
       </div>
+
+      <div className="oils-introduction-card">
+        <h2>CASTINE Dry Oil: Λάμψη & Ενυδάτωση</h2>
+        <p>Είναι ένα σύμπλεγμα φυσικών ελαίων άμεσης απορρόφησης που προσφέρει ακαταμάχητη λάμψη και άρωμα. Το έλαιο σφραγίζει την υγρασία και διατηρεί τα μαλλιά ενυδατωμένα, μειώνοντας το χρόνο στεγνώματος και βοηθώντας στο styling. Βοηθάει στην αποκατάσταση των βλαβών της τρίχας, κάνει τα μαλλιά ευκολοχτένιστα και αποτρέπει το σπάσιμο της τρίχας, με αποτέλεσμα τα μαλλιά να διατηρούν το μήκος τους. Ελέγχει το φρεζάρισμα και κάνει τα μαλλιά μαλακά, απαλά, δυνατά και ελαστικά.</p>
+      </div>
+    </div>
+     
       
       <HowToUseSection />
-      <Card />
       
   {/* Άλλα components */}
 </div>
@@ -66,24 +59,27 @@ const Product = () => {
 };
 
 const HowToUseSection = () => {
+  const [tabIndex, setTabIndex] = useState(-1);
+  const [hairTabIndex, setHairTabIndex] = useState(-1);
   return (
     <div className="how-to-use-container">
     <div className="how-to-use-content">
       <h2>ΟΔΗΓΙΕΣ ΧΡΗΣΗΣ</h2>
-      <Tabs>
+      
+      <Tabs selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
   <div className="tabsbtn">
     <Tab>Μαλλιά</Tab>
     <Tab>Σώμα</Tab>
   </div>
   <TabPanel>
-    <Tabs>
+  <Tabs selectedIndex={hairTabIndex} onSelect={index => setHairTabIndex(index)}>
       <div className="tabsbtn1">
         <Tab>Νωπά μαλλιά</Tab>
         <Tab>Στεγνά μαλλιά</Tab>
       </div>
       <TabPanel>
         <p>Απλώστε μερικές σταγόνες στις παλάμες σας και τρίψτε τα χέρια σας μέχρι να απλωθεί το προϊόν στις παλάμες και τα δάχτυλα σας. Στη συνέχεια, χρησιμοποιήστε τα δάχτυλα σας με μια κίνηση χτενίσματος για να κατανείμετε ομοιόμορφα το προϊόν από το μεσαίο μήκος έως τις άκρες.
-Σε νωπά μαλλιά βοηθάει στο ξεμπέρδεμα και στο styling.</p>
+         Σε νωπά μαλλιά βοηθάει στο ξεμπέρδεμα και στο styling.</p>
        <h3>
         Παραπάνω Θρέψη
        </h3>
@@ -123,7 +119,10 @@ const HowToUseSection = () => {
     <div className="image-container">
       <img src="/src/assets/images/image2.jpg" alt="" />
     </div>
+    
+  
   </div>
+  
     
   );
 };
@@ -145,56 +144,9 @@ const customStyles = {
   },
 };
 
-const Card = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  
-  function FlipCard({ title, description, image }) {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleClick = () => {
-    setIsFlipped(!isFlipped);
-  };
-  return (
-    <div className={`flip-card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
-      <div className="flip-card-inner">
-        <div className="flip-card-front">
-          <img src={image} alt={title} />
-        </div>
-        <div className="flip-card-back">
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 // Χρήση του Component της FlipCard
-<FlipCard
-  title="Φυτική Σιλικόνη"
-  description="Η Φυτική Σιλικόνη είναι μια μαλακτική ουσία που προέρχεται από τα Λιπαρά Οξέα της καρύδας. Δρα ως ισχυρό λιπαντικό στην επιφάνεια του δέρματος, σχηματίζοντας μια λεπτή μη λιπαρή μεμβράνη, χαρίζοντας στην επιδερμίδα απαλή, λεία και σφριγηλή όψη. Εφαρμόζεται στα μαλλιά και το δέρμα που οι μαλακτικές ιδιότητες είναι πολύ σημαντικές."
-  image="path_to_your_image"
-/>
-  
-    return (
-      <div className="card-container">
-        <h2>Συστατικά</h2>
-        <div className="flip-card-container">
-          <FlipCard
-            title="Φυτική Σιλικόνη"
-            description="Η Φυτική Σιλικόνη είναι μια μαλακτική ουσία που προέρχεται από τα Λιπαρά Οξέα της καρύδας. Δρα ως ισχυρό λιπαντικό στην επιφάνεια του δέρματος, σχηματίζοντας μια λεπτή μη λιπαρή μεμβράνη, χαρίζοντας στην επιδερμίδα απαλή, λεία και σφριγηλή όψη. Εφαρμόζεται στα μαλλιά και το δέρμα που οι μαλακτικές ιδιότητες είναι πολύ σημαντικές."
-            image="path_to_your_image"
-          />
-          <FlipCard
-            title="Αργκάν έλαιο"
-            description="Το έλαιο αργκάν είναι ένα από τα πλουσιότερα έλαια σε βιταμίνες και αντιοξειδωτικά. Είναι πλούσιο σε βιταμίνη Ε, Ωμέγα-6 και Ωμέγα-9 λιπαρά οξέα. Είναι ένα έλαιο που ενυδατώνει τα μαλλιά και το δέρμα, τα θρέφει και τα προστατεύει από την ξηρότητα."
-            image="path_to_your_image"
-          />
 
-          </div>
-          </div>
-    );
-}
+
 
 export default Product;
