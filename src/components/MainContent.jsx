@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../assets/MainContent.css';
 import { useSprings, animated, useSpring  } from 'react-spring';
 import productImage4 from '../assets/images/image4.jpg';
-import productImage7 from '../assets/images/image7.jpg';
+import productImage7 from '../assets/images/image7.JPG';
 import productImage9 from '../assets/images/image9.jpg';
 
 
