@@ -10,8 +10,8 @@ import 'react-tabs/style/react-tabs.css';
 Modal.setAppElement('#root');
 
 // Εισάγετε τις εικόνες
-import productImage1 from '../assets/images/image9.JPG';
-import productImage2 from '../assets/images/image10.JPG';
+import productImage1 from '../assets/images/image9.jpg';
+import productImage2 from '../assets/images/image10.jpg';
 import productImage3 from '../assets/images/image7.JPG';
 import productImage4 from '../assets/images/image8.JPG';
 
