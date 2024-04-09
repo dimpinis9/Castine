@@ -103,7 +103,7 @@
 
 .image-container img {
   max-width: 100%;
-  height: auto;
+  height: 80%;
   margin-left: 10%;
 }
 
@@ -140,6 +140,7 @@
 }
 .tabsbtn .react-tabs__tab {
   margin-right: 60px;
+  margin-top:5%;
 }
 
 .react-tabs__tab--selected {
@@ -160,6 +161,9 @@
 }
 
 
+.oils-introduction-card{
+  margin-right: 20%;
+}
 
 
 
@@ -229,6 +233,5 @@
     display: block;
   }
 
-  
 }
 

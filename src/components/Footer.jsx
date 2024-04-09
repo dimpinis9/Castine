@@ -13,7 +13,7 @@ const links = [
 
 const socials = [
   { href: "#", icon: "fab fa-facebook" },
-  { href: "#", icon: "fab fa-instagram" },
+  { href: "https://www.instagram.com/castine_official/", icon: "fab fa-instagram" },
   { href: "#", icon: "fab fa-twitter" },
 ];
 

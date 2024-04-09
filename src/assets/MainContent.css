@@ -35,39 +35,37 @@ img {
   width: 60%;
   margin-left: 20%;
 }
-
-
-
 /* Τίτλος προϊόντος */
 .product-title {
   position: absolute;
-  top: 50%;
-  left: 60%;
+  top: 20%;
+  left: 30%;
   transform: translate(-50%, -50%);
   color: #FFF;
   text-align: center;
-  width: 80%;
+  width: 70%;
   padding: 20px;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   border-radius: 10px;
   z-index: 2;
+  opacity: 0; /* Αρχικά κρύβουμε το κείμενο */
+  font-size: 3rem; /* Μεγαλύτερο μέγεθος γραμμάτων */
+  transition: opacity 4s ease-in-out; /* Μετάβαση για την εμφάνιση του κειμένου */
+}
+
+.product-title.fade-in {
+  opacity: 1; 
+}
+
+.product-title .animated-text {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.product-title .animated-text.show {
+  opacity: 1;
 }
 
 /* Προσθέστε custom styles για τον κάθε τύπο τίτλου */
-.deserve, .stay, .inside {
-  display: block; /* Τα κάνει να εμφανίζονται σε νέα γραμμή */
-  margin: 0.5em 0; /* Προσθέτει λίγο margin γύρω από κάθε τίτλο */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.deserve {
-  font-size: 3rem !important;  /* Μεγαλύτερη γραμματοσειρά για τον κύριο τίτλο */
-  font-weight: bold;
-}
-
-.stay, .inside {
-  font-size: 2.2rem; /* Μικρότερη γραμματοσειρά για τους υποτίτλους */
-}
 
 
 
@@ -117,14 +115,15 @@ img {
   transform: translateY(1px); /* Επαναφέρει το κουμπί στην αρχική του θέση όταν γίνεται κλικ */
 }
 
+.image-oil-card {
+ margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
 @media only screen and (max-width: 600px) {
-  main {
-    /* padding: 1rem; */
-    width: 500px; /* Μπορεί να χρειαστεί να μειώσετε το padding αν δημιουργεί περιθώρια */
-  }
-
   .hero {
-    width: 100%; /* Αυτό θα πρέπει να είναι ήδη σωστό, αλλά ελέγξτε το */
+    width: 100%;
+    margin-left: 0;
   }
 
   .image-container {
@@ -132,37 +131,38 @@ img {
     margin: 0; /* Βεβαιωθείτε ότι δεν υπάρχει margin */
   }
 
-  img {
-    max-width: 100%;
-    height: auto; /* Αυτό εξασφαλίζει ότι η εικόνα δεν περιορίζεται στα 150px σε μικρές συσκευές */
-    object-fit: cover;
-  }
-
-  .hero {
-    width: 100%;
-    margin-left: 0;
-  }
-    
   .image-oil-card {
-    width: 100%; /* Καμία ανάγκη για 'vw' στο responsive layout */
-    margin: 0; /* Βεβαιωθείτε ότι δεν υπάρχει margin */
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 10px; /* Προσθήκη border-radius για στρογγυλεμένα άκρα */
+    overflow: hidden; /* Αποκρύπτει το περιθώριο της εικόνας που ξεπερνά την κάρτα */
+    
   }
-  .content-container {
-    display: flex;
-    flex-direction: column;
+
+  .image-oil-card img {
+    width: 100%;
+    height : 50%; /* Καθορίζει το ύψος της εικόνας στο 50% */
+    object-fit: cover; /* Εφαρμογή object-fit για να διατηρήσει την αναλογία */
+
   }
 
-.OrderButton button { 
-  margin-top: 1rem; /* Αύξηση του περιθωρίου για καλύτερη εμφάνιση */
-  padding: 0.5rem 1rem; /* Μείωση του padding για καλύτερη εμφάνιση */
-  width: 50%; /* Καθορίζει το πλάτος του κουμπιού */
-}
-.oils-introduction-card h2 {
-  text-align: center; /* Κεντράρει τον τίτλο σε μικρές συσκευές */
-  font-size: 1.2rem; /* Αυξάνει το μέγεθος της γραμματοσειράς για καλύτερη αναγνωσιμότητα */
-  margin: 20px 0; /* Προσθέτει περισσότερο περιθώριο στο πάνω και κάτω μέρος */
-}
+  .OrderButton button {
+    width: 100%; /* Καθορίζει το πλάτος του κουμπιού στο 100% */
+    margin-top: 1rem; /* Αύξηση του περιθωρίου για καλύτερη εμφάνιση */
+    padding: 0.5rem 1rem; /* Μείωση του padding για καλύτερη εμφάνιση */
+  }
 
+  .oils-introduction-card {
+    padding: 10px; /* Μείωση του padding για καλύτερη εμφάνιση */
+    font-size: 14px;
+  }
 
-
+  .oils-introduction-card h2 {
+    font-size: 1.2rem; /* Μείωση του μεγέθους της γραμματοσειράς για καλύτερη αναγνωσιμότητα */
+    margin: 20px 0; /* Προσθέτει περισσότερο περιθώριο στο πάνω και κάτω μέρος */
+  }
+  .product-title {
+    top: 5%;
+    font-size: 2.2rem;
+  }
 }
