@@ -14,7 +14,7 @@ const links = [
 const socials = [
   { href: "#", icon: "fab fa-facebook" },
   { href: "https://www.instagram.com/castine_official/", icon: "fab fa-instagram" },
-  { href: "#", icon: "fab fa-twitter" },
+  { href: "https://www.tiktok.com/@castine_official?_t=8lOL9hGZZ5M&_r=1", icon: "fab fa-tiktok" },
 ];
 
 export const Footer = () => {

@@ -1,15 +1,13 @@
 /* Καθαρισμός βασικών στυλ */
 * {
-  margin: 0;
-  
-  padding: 0;
+
   box-sizing: border-box;
 }
 
 /* Κρυφή οριζόντια κύλιση */
 body, html {
-  margin: 0;
-  padding: 0;
+  
+  
   overflow-x: hidden; /* Για να αποτρέπεται η οριζόντια κύλιση */
 }
 
@@ -38,13 +36,13 @@ img {
 /* Τίτλος προϊόντος */
 .product-title {
   position: absolute;
-  top: 20%;
-  left: 30%;
+  top: 10%;
+  left: 10%;
   transform: translate(-50%, -50%);
   color: #FFF;
   text-align: center;
   width: 70%;
-  padding: 20px;
+  
   border-radius: 10px;
   z-index: 2;
   opacity: 0; /* Αρχικά κρύβουμε το κείμενο */
@@ -64,9 +62,6 @@ img {
 .product-title .animated-text.show {
   opacity: 1;
 }
-
-/* Προσθέστε custom styles για τον κάθε τύπο τίτλου */
-
 
 
 .oils-introduction-card {
@@ -120,6 +115,8 @@ img {
   border-radius: 10px;
   overflow: hidden;
 }
+
+
 @media only screen and (max-width: 600px) {
   .hero {
     width: 100%;
@@ -147,7 +144,7 @@ img {
   }
 
   .OrderButton button {
-    width: 100%; /* Καθορίζει το πλάτος του κουμπιού στο 100% */
+    width: 40%; 
     margin-top: 1rem; /* Αύξηση του περιθωρίου για καλύτερη εμφάνιση */
     padding: 0.5rem 1rem; /* Μείωση του padding για καλύτερη εμφάνιση */
   }
@@ -163,6 +160,12 @@ img {
   }
   .product-title {
     top: 5%;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
+ 
+  .deserve, .stay, .inside {
+    margin-bottom: 20px !important; /* Αλλάξτε την τιμή σύμφωνα με την επιθυμητή απόσταση */
+  }
+  
+
 }
