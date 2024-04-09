@@ -69,20 +69,19 @@ export const MainContent = () => {
         </animated.div>
       </div>
 </div>
-<div className="oils-introduction-card">
-  <h2>Τα φυσικά έλαια: Ελιξίρια ευεξίας και ομορφιάς</h2>
-  <p>Από την αρχαιότητα μέχρι σήμερα, τα έλαια θεωρούνται η επιτομή της περιποίησης για άνδρες και γυναίκες. </p>
-  <p> Είναι πλούσια σε θρεπτικά συστατικά και ιδανικά για την υγεία της επιδερμίδας και των μαλλιών.</p>
-  <p>Ανακαλύψτε το CASTINE dry oil και επωφεληθείτε από τους θησαυρούς που κρύβει μέσα του.</p>
-  {/* Προσθήκη της εικόνας */}
-  
+ <div className="oils-introduction-card" style={{ textAlign: 'center', padding: '20px' }}>
+ <h2>Τα φυσικά έλαια: Ελιξίρια ευεξίας και ομορφιάς</h2>
+ <p>Από την αρχαιότητα μέχρι σήμερα, τα έλαια θεωρούνται η επιτομή της περιποίησης για άνδρες και γυναίκες. </p>
+ <p> Είναι πλούσια σε θρεπτικά συστατικά και ιδανικά για την υγεία της επιδερμίδας και των μαλλιών.</p>
+ <p>Ανακαλύψτε το CASTINE dry oil και επωφεληθείτε από τους θησαυρούς που κρύβει μέσα του.</p>
 </div>
-<div className="OrderButton">
-<button onClick={addToCart}>ΠΑΡΑΓΓΕΛΙΑ ΤΩΡΑ</button>
 
+<div className="OrderButton" style={{ textAlign: 'center', margin: '20px 0' }}>
+ <button onClick={addToCart} style={{ padding: '10px 20px', fontSize: '16px',order: 'none', borderRadius: '4px', cursor: 'pointer' }}>ΠΑΡΑΓΓΕΛΙΑ ΤΩΡΑ</button>
 </div>
-<div className='image-oil-card'>
-<img src={imageUrls[1]}  style={{ maxWidth: '100%', height: '120vh', marginTop:'10px', width: '80%' }} />
+
+<div className='image-oil-card' style={{ textAlign: 'center' }}>
+ <img src={imageUrls[1]}  style={{ maxWidth: '100%', width: '100%', height: 'auto' }} alt="Oil" />
 </div>
 
   
