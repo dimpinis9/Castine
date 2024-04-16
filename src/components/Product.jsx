@@ -12,7 +12,7 @@ Modal.setAppElement('#root');
 // Εισάγετε τις εικόνες
 import productImage1 from '../assets/images/image9.jpg';
 import productImage2 from '../assets/images/image10.jpg';
-import productImage3 from '../assets/images/image15.JPG';
+import productImage3 from '../assets/images/image15.jpg';
 import productImage4 from '../assets/images/image20.jpg';
 import productImage5 from '../assets/images/image115.jpg';
 
