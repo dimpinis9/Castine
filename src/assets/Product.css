@@ -4,6 +4,7 @@
   grid-template-rows: auto auto auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   flex-direction: column;
+  width: 100%;
 
 }
 
@@ -11,6 +12,23 @@
   grid-column: 1;
 }
 
+.read-more-button{
+  background-color: #fbf9ed ;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+margin-right: 2px;
+font-weight:bold ;
+}
+
+.product-details h1,
+.product-details h3,
+.product-details .product-description
+ {
+  text-align: left; /* Αριστερή στοίχιση, διαθέσιμες επιλογές: left, right, center, justify */
+
+}
 .add-to-cart-button{
   background-color: black;
   border: none;
@@ -24,6 +42,55 @@
   box-shadow: 0px 10px 20px rgba(0,0,0,0.2); /* Μεγαλύτερη και πιο απαλή σκίαση για βάθος */
   border: 1px solid #ddd; /* Προσθήκη λεπτής γραμμής για διακριτική περίγραμμα */
 }
+
+.product-details {
+  width: 100%;
+  margin-top: 8%;
+}
+
+.product-details h1 {
+  font-size: 1.5em;
+  margin-left: 0.5%;
+  font-style: italic;
+}
+
+.product-details h3 {
+  font-size: 1em;
+  margin-right: 80%;
+  background-color:#fbf9ed ;
+  margin-top: 0.5%;
+  margin-left: 0.5%;
+  font-style: italic;
+}
+.tabsbtn-properties  {
+  padding: 10px;
+  margin-right: 5px;
+  list-style: none;
+  background-color: #fbf9ed; /* Αλλάξτε το χρώμα ανάλογα με την προτίμησή σας */
+  cursor: pointer;
+  /* Εδώ μπορείς να προσθέσεις περισσότερο στυλ αν θέλεις */
+}
+
+/* Στυλ για το ενεργό tab */
+.tabsbtn-properties --selected {
+  color: black;
+  border-bottom: none; /* Εάν θέλετε να "εξαφανίσετε" το κάτω μέρος της διαχωριστικής γραμμής */
+}
+
+/* Διαμόρφωση του περιεχομένου κάθε TabPanel */
+.react-tabs__tab-panel {
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* Στυλ για τα κείμενα */
+.oils-introduction-card p {
+  text-align: justify; /* Για πλήρη στοίχιση κειμένου */
+  margin-bottom: 15px;
+   /* Προσθέστε κάποιο margin ανάμεσα στις παραγράφους */
+}
+
 .product-carousel img {
   width: 100%;
   /* height: 40%; */
@@ -74,15 +141,15 @@
 }
 
 .image-container {
-  flex: 1;
-  display: flex;
-  width: 100%;
+  width: 100%; /* Ορίζουμε το πλάτος του container σε 100% */
+  margin: 0; /* Εξασφαλίζουμε ότι δεν υπάρχουν περιθώρια */
+  overflow: hidden; /* Εξασφαλίζουμε ότι δεν υπάρχει κανένα μέρος της εικόνας που να υπερχειλίζει */
+  margin-bottom: 5%;
 }
 
 .image-container img {
-  max-width: 100%;
-  height: 80%;
-  margin-left: 10%;
+  width: 100%; /* Κάνουμε την εικόνα να πιάνει 100% του πλάτους του container της */
+  height: auto; /* Προσαρμόζουμε το ύψος της εικόνας ανάλογα για να διατηρηθούν οι αναλογίες της */
 }
 
 .usage-steps {
@@ -160,6 +227,7 @@
   margin-top: 5%;
 }
 
+
   .product-details {
     width: 100%;
     margin-top: 8%;
@@ -167,6 +235,15 @@
 
   .product-details h1 {
     font-size: 1.5em;
+    margin-right: 50%;
+  }
+
+  .product-details h3 {
+    font-size: 1em;
+    margin-right: 75%;
+    background-color:#fbf9ed ;
+    margin-top: 0.5%;
+  
   }
 
   .product-description {
