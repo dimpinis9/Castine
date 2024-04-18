@@ -1,11 +1,17 @@
 .product-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  flex-direction: column;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.product-container .carousel img {
   width: 100%;
+  height: 800px;  
+  object-fit: cover;  
+  object-position: center;  
+}
 
+.product-container .carousel .control-dots .dot {
+  background: #fff;
+  border: 2px solid #333;
 }
 
 .product-carousel, .how-to-use-container {
@@ -15,11 +21,17 @@
 .read-more-button{
   background-color: #fbf9ed ;
   border: none;
+  color: #333;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
 margin-right: 2px;
 font-weight:bold ;
+}
+
+.read-more-button:hover {
+  color: #0056b3; /* Darker blue when hovered */
+  text-decoration: underline;
 }
 
 .product-details h1,
@@ -32,16 +44,19 @@ font-weight:bold ;
 .add-to-cart-button{
   background-color: black;
   border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
   width: 41%;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
-.product-carousel {
-  max-width: 600px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 20px; /* Αυξήστε το radius για πιο στρογγυλεμένες γωνίες */
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.2); /* Μεγαλύτερη και πιο απαλή σκίαση για βάθος */
-  border: 1px solid #ddd; /* Προσθήκη λεπτής γραμμής για διακριτική περίγραμμα */
+
+.add-to-cart-button:hover {
+  background-color: #fbf9ed; /* Darker green when hovered */
 }
+
+
 
 .product-details {
   width: 100%;
@@ -72,17 +87,7 @@ font-weight:bold ;
 }
 
 /* Στυλ για το ενεργό tab */
-.tabsbtn-properties --selected {
-  color: black;
-  border-bottom: none; /* Εάν θέλετε να "εξαφανίσετε" το κάτω μέρος της διαχωριστικής γραμμής */
-}
 
-/* Διαμόρφωση του περιεχομένου κάθε TabPanel */
-.react-tabs__tab-panel {
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-}
 
 /* Στυλ για τα κείμενα */
 .oils-introduction-card p {
@@ -91,34 +96,48 @@ font-weight:bold ;
    /* Προσθέστε κάποιο margin ανάμεσα στις παραγράφους */
 }
 
-.product-carousel img {
-  width: 100%;
-  /* height: 40%; */
-  transition: transform 0.5s ease; /* Προσθήκη απαλής μετάβασης για το zoom */
+.ant-tabs-nav {
+    margin: 0;
+    padding: 16px;
+   
 }
 
-.product-carousel img:hover {
-  transform: scale(1.05); /* Ελαφρύ zoom κατά τη διάρκεια του hover */
-}
-.carousel .thumbs {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center; /* Κεντραρισμός των thumbnails */
+/* Στυλ για τα ενεργά και hover tabs */
+/* .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #1890ff; 
+    font-weight: bold;
+} */
+
+.ant-tabs-tab:hover {
+    background-color: #e6f7ff; /* Ανοιχτό μπλε background στο hover */
 }
 
-.carousel .thumb {
-  margin: 5px;
-  border: 2px solid #ddd; /* Διακριτικό περίγραμμα για κάθε thumbnail */
-  border-radius: 10px; /* Στρογγυλεμένες γωνίες */
-  transition: transform 0.3s ease, border-color 0.3s ease;
+/* Στυλ για τα εικονίδια μέσα στα Tabs */
+.ant-tabs-tab i {
+    margin-right: 8px; /* Προσθήκη απόστασης ανάμεσα στο εικονίδιο και το κείμενο */
 }
 
-.carousel .thumb.selected, .carousel .thumb:hover {
-  
-  transform: scale(1.1); /* Ελαφρύ zoom */
+/* Προσαρμογή του περιεχομένου των TabPanels */
+.ant-tabs-content-holder {
+    padding: 20px;
+    border: 1px solid #d9d9d9;
+    border-top: none; /* Αφαίρεση του πάνω border για ομαλή συνέχεια με τα tabs */
+    background-color: white;
 }
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: black !important; /* Μαύρο χρώμα για το ενεργό tab */
+}
+.ant-tabs-ink-bar {
+  background-color: black !important;
+}
+
+/* Προαιρετικά, μπορείτε να αλλάξετε το χρώμα του υπόλοιπου κειμένου των tabs για να εξασφαλίσετε καλύτερη αντίθεση */
+.ant-tabs-tab .ant-tabs-tab-btn {
+  color: grey; /* Ανοιχτότερο χρώμα για τα μη ενεργά tabs */
+}
+
+
 .how-to-use-container {
   display: flex;
   justify-content: space-between;
@@ -174,36 +193,6 @@ font-weight:bold ;
   
 }
 
-/* Στυλ για κάθε tab */
-.react-tabs__tab {
-  padding: 10px 20px;
-  background:#fbf9ed;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-
-}
-.tabsbtn .react-tabs__tab {
-  margin-right: 60px;
-  margin-top:5%;
-}
-
-.react-tabs__tab--selected {
-  background: #007BFF !important; 
-  color: #fff !important; 
-  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-/* Στυλ για το περιεχόμενο κάθε tab */
-.react-tabs__tab-panel {
-  padding: 20px;
-  background: #fff;
-  
-  border-radius: 5px;
-}
-
-.tabsbtn1 .react-tabs__tab {
-  margin-right: 50px;
-}
 
 
 .oils-introduction-card{
@@ -216,6 +205,13 @@ font-weight:bold ;
 @media (max-width: 768px) {
   .product-container {
     grid-template-columns: 1fr;
+  }
+
+  .product-container .carousel img {
+    width: 100%;
+    height: 550px;  
+    object-fit: cover;  
+    object-position: center;  
   }
 
   .product-carousel, .how-to-use-container {
@@ -291,6 +287,14 @@ font-weight:bold ;
   .how-to-use-container {
     display: block;
   }
+
+  .ant-tabs-nav {
+    padding: 8px;
+}
+
+.ant-tabs-tab {
+    padding: 8px; /* Μικρότερο padding για τα tabs σε μικρότερες συσκευές */
+}
 
 }
 
