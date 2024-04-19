@@ -20,6 +20,7 @@ import productImage2 from '../assets/images/image10.jpg';
 import productImage3 from '../assets/images/image15.jpg';
 import productImage4 from '../assets/images/image20.jpg';
 import productImage5 from '../assets/images/image115.JPG';
+import productImage6 from '../assets/images/image8.JPG';
 
 const ProductDescription = ({ description }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -89,7 +90,7 @@ const Product = () => {
     </div>
  
     <div className="image-container">
-      <img src="/src/assets/images/image8.JPG"/>
+      <img src={productImage6}  />
     </div>
       <HowToUseSection />
   {/* Άλλα components */}
