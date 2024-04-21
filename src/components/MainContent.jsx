@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/MainContent.css';
-import { useSprings, animated, useSpring  } from 'react-spring';
+
 import { useCart } from '../CartContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,39 +11,9 @@ import productImage7 from '../assets/images/image7.JPG';
 
 
 
-const AnimatedText = ({ text }) => {
-  const characters = text.split('');
-  // Χρησιμοποιήστε τη useSprings για να δημιουργήσετε ένα spring για κάθε χαρακτήρα με τη δική του καθυστέρηση
-  const springs = useSprings(
-    characters.length,
-    characters.map((_, index) => ({
-      from: { opacity: 0, transform: 'translateY(-100px)' },
-      to: { opacity: 1, transform: 'translateY(0)' },
-      delay: index * 100, // Δώστε σε κάθε χαρακτήρα μια καθυστέρηση
-    }))
-  );
-
-  return (
-    <div>
-      {springs.map((props, index) => (
-        <animated.span key={index} style={props}>
-          {characters[index]}
-        </animated.span>
-      ))}
-    </div>
-  );
-};
-
-
 export const MainContent = () => {
   const [showHero, setShowHero] = useState(true);
-  const [cartItems, setCartItems] = useState([]);
-  const slideIn = useSpring({
-    from: { opacity: 0, transform: 'translateX(-50%)' },
-    to: { opacity: 1, transform: 'translateX(0)' },
-    delay: 200,
-  });
-
+ 
   useEffect(() => {
     setShowHero(true);
   }, []);
@@ -54,10 +24,10 @@ export const MainContent = () => {
 
   const handleAddToCart = () => {
     const product = {
-      id: 1, // Μοναδικός ID για κάθε προϊόν
+      id: 1, 
       name: 'Φυσικό έλαιο CASTINE',
       price: 47,
-      image: productImage9, // Προσθέστε σωστή διαδρομή εικόνας
+      image: productImage9, 
     };
 
     addToCart(product);
@@ -98,14 +68,6 @@ export const MainContent = () => {
 </div>
 </div>
 
-
-{/* </div> */}
-
-
-
-  
-
-      
     </main>
   );
 };

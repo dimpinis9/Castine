@@ -11,10 +11,19 @@ header {
   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
   width: 100%;
 }
-
-
 .logo img {
   height: 30px;
+}
+.cart-count {
+  background-color: white !important;
+  color: black; /* Μαύρο κείμενο */
+  padding: 0.25em 0.6em; /* Προσθήκη ελαφριάς εσοχής γύρω από το κείμενο */
+  border-radius: 50%; /* Κυκλικό σχήμα */
+  font-size: 0.5rem; /* Μικρότερο μέγεθος γραμματοσειράς για το κείμενο */
+  position: absolute; /* Απόλυτη τοποθέτηση για το positioning στο header */
+
+  transform: translate(50%, -50%); /* Κεντράρισμα στην επάνω δεξιά γωνία του εικονιδίου καλαθιού */
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1); /* Λεπτή σκιά για διακριτικό depth */
 }
 
 nav ul {

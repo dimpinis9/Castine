@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import '../assets/Header.css';
 import CartModal from './CartModal'; 
+import { useCart } from '../CartContext';
 import logo from '../assets/images/castine_logo.png'
 
 export const Header = () => {
   const [isCartModalOpen, setCartModalOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const { cartItems } = useCart();
+  const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   const openCartModal = () => {
     setCartModalOpen(true);
@@ -27,7 +30,7 @@ export const Header = () => {
         
           <li><a href="/">ΑΡΧΙΚΗ</a></li>
           <li><a href="/products">ΠΡΟΙΟΝ</a></li>
-          <li><a href="/about">ABOUT US</a></li>
+          
           <li><a href="/contact">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
           <li><button onClick={() => setMenuOpen(false)}><i className="fas fa-times"></i></button></li>
         </ul>
@@ -41,10 +44,11 @@ export const Header = () => {
         </a>
         <div className="cart" onClick={openCartModal}>
           <i className="fas fa-shopping-cart"></i>
+          {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
         </div>
       </div>
       <CartModal isOpen={isCartModalOpen} onRequestClose={closeCartModal} />
     </header>
   );
   
-npm };
+}
