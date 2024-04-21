@@ -120,7 +120,7 @@ font-weight:bold;
 .ant-tabs-nav {
     margin: 0;
     padding: 16px;
-   
+    border:none;
 }
 
 
@@ -139,6 +139,8 @@ font-weight:bold;
     border: 1px solid #d9d9d9;
     border-top: none; /* Αφαίρεση του πάνω border για ομαλή συνέχεια με τα tabs */
     background-color: white;
+    border: none;
+ 
 }
 
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
@@ -146,6 +148,8 @@ font-weight:bold;
 }
 .ant-tabs-ink-bar {
   background-color: black !important;
+  border: none;
+
 }
 
 /* Προαιρετικά, μπορείτε να αλλάξετε το χρώμα του υπόλοιπου κειμένου των tabs για να εξασφαλίσετε καλύτερη αντίθεση */
@@ -258,6 +262,7 @@ font-weight:bold;
   font-size: 1rem;
   color: #333; /* ή ό,τι χρώμα προτιμάτε */
   box-shadow: 0 2px 3px #f0f1f2;
+
 }
 
 .faq-container .ant-collapse > .ant-collapse-item {
@@ -285,8 +290,6 @@ font-weight:bold;
 }
 
 .ingredients-section{
-
-  
   margin-top: 5%;
   margin-bottom: 5%;
   margin-right: 50%;
@@ -299,10 +302,14 @@ font-weight:bold;
   width: 1300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: auto;
+  border: none;
+
 }
 
 .ingredients-tabs-container .ant-card {
   background: transparent;
+  border: none;
+
 }
 
 .ingredients-header {
@@ -319,10 +326,12 @@ font-weight:bold;
 .ingredients-header p {
   color: #555;
   font-size: 16px;
+  
 }
 
 .ant-tabs-card .ant-tabs-content {
   margin-top: -16px;
+  border: none;
 }
 
 .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
@@ -330,6 +339,13 @@ font-weight:bold;
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 6px #0000000f;
+ 
+}
+
+.ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane p {
+  text-align: justify;
+  text-justify: inter-word; /* Για πιο ομοιογενή κατανομή των λέξεων */
+  margin-bottom: 1rem; /* Προσθέτει απόσταση στο κάτω μέρος των παραγράφων */
 }
 
 .ant-tabs-tab {
@@ -389,10 +405,10 @@ font-weight:bold;
 
 }
 
-
   .product-details {
     width: 100%;
     margin-top: 8%;
+    padding-left: 2%;
   }
 
   .product-details h1 {
@@ -412,6 +428,7 @@ font-weight:bold;
 
   .product-price {
     font-size: 1.2em;
+    margin-left: 40%;
   }
 
   .add-to-cart-button {
@@ -484,6 +501,12 @@ font-weight:bold;
   margin-bottom: 5%;
   margin-right: 0%;
 
+}
+
+.ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane p {
+  text-align: left; /* ή 'justify', αν προτιμάτε συνεχή στοίχιση */
+  font-size: 0.9em; /* Μικρότερο μέγεθος γραμματοσειράς */
+  padding: 0 10px; /* Προσθήκη εσοχής στα δεξιά και αριστερά */
 }
 
 .ingredients-tabs-container {
