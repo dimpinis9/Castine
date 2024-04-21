@@ -162,7 +162,6 @@ font-weight:bold;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   margin-top: 10%;
- 
   width: 1300px;
   height: 90%;
   
@@ -196,10 +195,8 @@ font-weight:bold;
   height: auto; /* Προσαρμόζουμε το ύψος της εικόνας ανάλογα για να διατηρηθούν οι αναλογίες της */
 }
 
-/* .usage-steps {
-  list-style-type: none;
-  padding: 0;
-} */
+
+ 
 
 .card {
   grid-row: 3; 
@@ -285,6 +282,83 @@ font-weight:bold;
 
 .faq-container button:hover {
   background-color: #333; /* ή ό,τι χρώμα προτιμάτε */
+}
+
+.ingredients-section{
+
+  
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 50%;
+}
+
+.ingredients-tabs-container {
+  background: #FFFBE6;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 1300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.ingredients-tabs-container .ant-card {
+  background: transparent;
+}
+
+.ingredients-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ingredients-header h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.ingredients-header p {
+  color: #555;
+  font-size: 16px;
+}
+
+.ant-tabs-card .ant-tabs-content {
+  margin-top: -16px;
+}
+
+.ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px #0000000f;
+}
+
+.ant-tabs-tab {
+  border: none;
+  background: #FFFBE6 !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #333;
+  font-weight: 600;
+}
+
+.ant-tabs-tab:hover {
+  border-color: #e8e8e8;
+}
+
+.ant-tabs-tab, .ant-tabs-tab-active, .ant-tabs-tab-disabled {
+  background: transparent !important;
+}
+
+.ant-tabs-tab-btn {
+  display: flex;
+  align-items: center;
+}
+
+.ant-tabs-tab-btn .anticon {
+  color: #FFD700; /* Gold color for the Plus icon */
+  font-size: 16px;
+  margin-right: 8px;
 }
 
 
@@ -405,6 +479,29 @@ font-weight:bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.ingredients-section{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 0%;
+
+}
+
+.ingredients-tabs-container {
+  
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.ingredients-header h2 {
+  font-size: 20px;
+}
+
+.ingredients-header p {
+  font-size: 14px;
+}
 
 }
 
