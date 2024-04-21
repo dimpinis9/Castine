@@ -15,18 +15,11 @@ main {
   padding: 0; /* Αφαιρέθηκε το padding που προστέθηκε στην αρχική σας διαμόρφωση */
 }
 
-.image-container {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh; /* ή όποιο ύψος επιθυμείτε */
-  overflow: hidden;
-}
 
 img {
   max-width: 100%;
   height: auto;
-  object-fit: cover; /* Αν θέλετε να καλύψει ολόκληρη την περιοχή, αλλά μπορεί να περικόψει την εικόνα */
+  object-fit: cover; 
 }
 
 .hero {
@@ -34,36 +27,80 @@ img {
   margin-left: 20%;
 }
 /* Τίτλος προϊόντος */
+
+
+.image-container {
+  width: 1348px; /* Ρύθμιση του πλάτους του κοντέινερ */
+  height:1000px;/* Ρύθμιση του ύψους της εικόνας */
+  overflow: hidden;
+ position: relative;
+  display: flex;
+  padding-top: 10%;
+  justify-content: center;
+  align-items: center;
+  
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 5s ease-in-out; /* Διάρκεια zoom */
+  transform-origin: center; /* Κέντρο του zoom */
+  animation: zoomIn 5s ease-in-out forwards; /* Καθορίζει την αναπαραγωγή της animation */
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1); /* Αρχική κατάσταση */
+  }
+  100% {
+    transform: scale(1.2); /* Κατάσταση μετά το zoom */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.deserve, .stay, .inside {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.deserve {
+  animation-delay: 0.5s; /* Προσαρμόστε τις καθυστερήσεις ανάλογα */
+}
+
+.stay {
+  animation-delay: 1.0s;
+}
+
+.inside {
+  animation-delay: 1.5s;
+}
+
+
+.image-lmp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -3%;
+  
+}
 .product-title {
   position: absolute;
   top: 10%;
-  left: 10%;
-  transform: translate(-50%, -50%);
-  color: #FFF;
+  font-size: 3rem;
+  color: white;
   text-align: center;
-  width: 70%;
-  
-  border-radius: 10px;
-  z-index: 2;
-  opacity: 0; /* Αρχικά κρύβουμε το κείμενο */
-  font-size: 3rem; /* Μεγαλύτερο μέγεθος γραμμάτων */
-  transition: opacity 4s ease-in-out; /* Μετάβαση για την εμφάνιση του κειμένου */
+  width: 100%;
 }
-
-.product-title.fade-in {
-  opacity: 1; 
-}
-
-.product-title .animated-text {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.product-title .animated-text.show {
-  opacity: 1;
-}
-
-
 .oils-introduction-card {
  
   background-color: #fbf9ed; /* Ή οποιοδήποτε χρώμα ταιριάζει με τον σχεδιασμό σας */
@@ -124,9 +161,41 @@ img {
   }
 
   .image-container {
-    width: 100%; /* Καμία ανάγκη για 'vw' στο responsive layout */
-    margin: 0; /* Βεβαιωθείτε ότι δεν υπάρχει margin */
+    height: 60vh; /* Αλλάζει το ύψος της εικόνας σε 100vh */
+  
+
   }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 5s ease-in-out; /* Διάρκεια zoom */
+    transform-origin: center; /* Κέντρο του zoom */
+    animation: zoomIn 5s ease-in-out forwards; /* Καθορίζει την αναπαραγωγή της animation */
+  }
+
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1); /* Αρχική κατάσταση */
+    }
+    100% {
+      transform: scale(1.8); /* Κατάσταση μετά το zoom */
+    }
+  }
+  .image-lmp{
+    margin-top: -35px;
+
+  }
+
+  .product-title {
+    top: 5%; /* Μετακινεί τον τίτλο προς τα κάτω */
+    font-size: 2rem; /* Μειώνει το μέγεθος της γραμματοσειράς του τίτλου */
+  }
+
+  .deserve, .stay, .inside {
+    margin-bottom: 10px !important; /* Αλλάξτε την τιμή σύμφωνα με την επιθυμητή απόσταση */
+  }
+  
 
   .image-oil-card {
     width: 100%;
@@ -158,14 +227,8 @@ img {
     font-size: 1.2rem; /* Μείωση του μεγέθους της γραμματοσειράς για καλύτερη αναγνωσιμότητα */
     margin: 20px 0; /* Προσθέτει περισσότερο περιθώριο στο πάνω και κάτω μέρος */
   }
-  .product-title {
-    top: 5%;
-    font-size: 2.5rem;
-  }
  
-  .deserve, .stay, .inside {
-    margin-bottom: 20px !important; /* Αλλάξτε την τιμή σύμφωνα με την επιθυμητή απόσταση */
-  }
+ 
   
 
 }

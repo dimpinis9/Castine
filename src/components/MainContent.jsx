@@ -61,18 +61,18 @@ export const MainContent = () => {
 
   return (
     <main>
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100%', position: 'relative' }}>
-        <div className="image-container" style={{ width: '100%', height: '120vh', overflow: 'hidden', position: 'relative' }}>
-          {showHero && (
-            <img src={imageUrls[0]} style={{ width: "100%", height: "100vh", objectFit: 'cover' }} alt="Slideshow" />
-          )}
-          <animated.div className="product-title" style={{ ...slideIn }}>
-          <AnimatedText text="YOU DESERVE IT" className="deserve"  />
-  <AnimatedText text="STAY BEAUTIFUL" className="stay"/>
-            <AnimatedText text="INSIDE AND OUTSIDE" className="inside" />
-          </animated.div>
-        </div>
-</div>
+  <div className='image-lmp'>
+      <div className="image-container">
+        {showHero && (
+          <img src={imageUrls[0]} />
+        )}
+         <div className="product-title" >
+          <div className="deserve">YOU DESERVE IT</div>
+          <div className="stay">STAY BEAUTIFUL</div>
+          <div className="inside">INSIDE AND OUTSIDE</div>
+          </div>
+      </div>
+    </div>
 <div className="oils-introduction-card">
   <h2>Τα φυσικά έλαια: Ελιξίρια ευεξίας και ομορφιάς</h2>
   <p>Από την αρχαιότητα μέχρι σήμερα, τα έλαια θεωρούνται η επιτομή της περιποίησης για άνδρες και γυναίκες. </p>
