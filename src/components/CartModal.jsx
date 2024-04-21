@@ -1,7 +1,9 @@
 // CartModal.js
 import React from 'react';
 import '../assets/CartModal.css';
-import Modal from 'react-modal';
+import Modal from 'antd/lib/modal/Modal'; // Χρήση του Modal από Ant Design
+import List from 'antd/lib/list';  // Χρήση του List από Ant Design
+import { Button } from 'antd';    // Χρήση του Button από Ant Design
 import { useCart } from '../CartContext';
 
 const CartModal = ({ isOpen, onRequestClose }) => {
@@ -9,23 +11,29 @@ const CartModal = ({ isOpen, onRequestClose }) => {
 
   return (
     <Modal
-      isOpen={isOpen}
-      onRequestClose={onRequestClose}
-      contentLabel="Καλάθι"
+      title="Το καλάθι σας"
+      open={isOpen} // Ενημέρωση από `visible` σε `open`
+      onCancel={onRequestClose}
+      footer={[
+        <Button key="close" onClick={onRequestClose}>
+          Κλείσιμο
+        </Button>
+      ]}
     >
-      <div className="modal-content">
-        <h2>Το καλάθι σας</h2>
-        <ul>
-          {cartItems.map((item, index) => (
-            <li key={index}>
-              <img src={item.image} alt={item.name} />
-              <span>{item.name}</span>
-              <span>{item.price} €</span>
-            </li>
-          ))}
-        </ul>
-        <button onClick={onRequestClose}>Κλείσιμο</button>
-      </div>
+      <List
+        itemLayout="horizontal"
+        dataSource={cartItems}
+        renderItem={item => (
+          <List.Item>
+            <List.Item.Meta
+              avatar={<img src={item.image} alt={item.name} style={{ width: '70px', height: '70px', borderRadius: '5px' }} />}
+              title={item.name}
+              description={`Ποσότητα: ${item.quantity}`}
+            />
+            <div>{item.price} €</div>
+          </List.Item>
+        )}
+      />
     </Modal>
   );
 };

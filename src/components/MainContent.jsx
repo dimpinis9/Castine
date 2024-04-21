@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/MainContent.css';
 import { useSprings, animated, useSpring  } from 'react-spring';
+import { useCart } from '../CartContext';
+import  productImage9 from '../assets/images/image9.jpg';
 import productImage4 from '../assets/images/image4.jpg';
 import productImage7 from '../assets/images/image7.JPG';
 
@@ -46,17 +48,17 @@ export const MainContent = () => {
 
   const imageUrls = [productImage4, productImage7];
 
-  const addToCart = () => {
-    // Εισάγετε το προϊόν που θέλετε να προσθέσετε στο καλάθι
-    const newProduct = {id: 1,
-      name: 'Φυσικό έλαιο CASTINE',
-      price: 45.99,
-      quantity: 1,
-      image: productImage9,
-      };
+  const { addToCart } = useCart();
 
-    // Προσθήκη του προϊόντος στο καλάθι
-    setCartItems([...cartItems, newProduct]);
+  const handleAddToCart = () => {
+    const product = {
+      id: 1, // Μοναδικός ID για κάθε προϊόν
+      name: 'Φυσικό έλαιο CASTINE',
+      price: 47,
+      image: productImage9, // Προσθέστε σωστή διαδρομή εικόνας
+    };
+
+    addToCart(product);
   };
 
   return (
@@ -81,17 +83,18 @@ export const MainContent = () => {
   {/* Προσθήκη της εικόνας */}
   
 </div>
-
+ <div className="order-card">
 <div className='image-oil-card'>
 <img src={imageUrls[1]}   />
 {/* <div className="oils-introduction-card"> */}
 <p>Ανακαλύψτε το CASTINE dry oil και επωφεληθείτε από τους θησαυρούς που κρύβει μέσα του.</p>
-</div>
-
 <div className="OrderButton">
-<button onClick={addToCart}>ΠΑΡΑΓΓΕΛΙΑ ΤΩΡΑ</button>
-
+<button onClick={handleAddToCart}>ΠΑΡΑΓΓΕΛΙΑ ΤΩΡΑ</button>
 </div>
+</div>
+</div>
+
+
 {/* </div> */}
 
 

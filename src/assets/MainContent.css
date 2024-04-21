@@ -36,6 +36,7 @@ img {
  position: relative;
   display: flex;
   padding-top: 10%;
+ 
   justify-content: center;
   align-items: center;
   
@@ -107,7 +108,6 @@ img {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 4rem;
   width: 100%; /* Εξασφαλίζει ότι η κάρτα προσαρμόζεται στο πλάτος του γονικού της στοιχείου */
   text-align: center; /* Κεντράρει το κείμενο μέσα στην κάρτα */
   
@@ -147,12 +147,28 @@ img {
   transform: translateY(1px); /* Επαναφέρει το κουμπί στην αρχική του θέση όταν γίνεται κλικ */
 }
 
-.image-oil-card {
- margin-top: 20px;
-  border-radius: 10px;
-  overflow: hidden;
+.image-oil-card img {
+  width: 100%;
+  height : 80%; /* Καθορίζει το ύψος της εικόνας στο 50% */
+  object-fit: cover; /* Εφαρμογή object-fit για να διατηρήσει την αναλογία */
+
 }
 
+.image-oil-card {
+  width: 50%; /* Καθορίζει το πλάτος της κάρτας */
+  height: 900px;
+  
+  margin-top: 1rem; /* Προσθέτει περιθώριο στο πάνω μέρος της κάρτας */
+  border-radius: 10px; /* Προσθήκη border-radius για στρογγυλεμένα άκρα */
+  overflow: hidden; /* Αποκρύπτει το περιθώριο της εικόνας που ξεπερνά την κάρτα */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Προσθήκη σκιάς στην κάρτα */
+}
+.order-card{
+  display: flex; /* Καθιστά τον γονικό container flex container */
+  justify-content: center; /* Κεντραρίζει τα περιεχόμενα οριζόντια */
+  align-items: center; /* Κεντραρίζει τα περιεχόμενα κατακόρυφα */
+  height: 100vh
+}
 
 @media only screen and (max-width: 600px) {
   .hero {
@@ -196,12 +212,21 @@ img {
     margin-bottom: 10px !important; /* Αλλάξτε την τιμή σύμφωνα με την επιθυμητή απόσταση */
   }
   
-
+  
+  .order-card{
+    display: flex; /* Καθιστά τον γονικό container flex container */
+    justify-content: center; /* Κεντραρίζει τα περιεχόμενα οριζόντια */
+    align-items: center;
+    height: 90vh;
+    margin-top: -5px;
+    
+  }
   .image-oil-card {
     width: 100%;
     margin-top: 1rem;
     border-radius: 10px; /* Προσθήκη border-radius για στρογγυλεμένα άκρα */
-    overflow: hidden; /* Αποκρύπτει το περιθώριο της εικόνας που ξεπερνά την κάρτα */
+    overflow: hidden;
+    height: 90vh;
     
   }
 
