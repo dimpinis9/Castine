@@ -20,6 +20,11 @@
   grid-column: 1;
 }
 
+.product-description{
+  align-items: center;
+  text-align: center;
+}
+
 .read-more-button{
   background-color: #fbf9ed ;
   border: none;
@@ -27,8 +32,9 @@
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 25%;
-font-weight:bold;
+  margin-bottom: 30px;
+  margin-top: -10px;
+ font-weight:bold;
 }
 
 .read-more-button:hover {
@@ -61,7 +67,7 @@ font-weight:bold;
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: 40%;
   font-size: 16px;
   transition: background-color 0.3s;
@@ -78,7 +84,6 @@ font-weight:bold;
 }
 
 
-
 .product-details {
   width: 100%;
   margin-top: 8%;
@@ -87,7 +92,7 @@ font-weight:bold;
 .product-details h1 {
   font-size: 1.5em;
   margin-left: 0.5%;
-  font-style: italic;
+ 
 }
 
 .product-details h3 {
@@ -96,7 +101,7 @@ font-weight:bold;
   background-color:#fbf9ed ;
   margin-top: 0.5%;
   margin-left: 0.5%;
-  font-style: italic;
+  
 }
 .tabsbtn-properties  {
   padding: 10px;
@@ -117,9 +122,16 @@ font-weight:bold;
    /* Προσθέστε κάποιο margin ανάμεσα στις παραγράφους */
 }
 
+.oils-introduction-card .ant-tabs-nav-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .ant-tabs-nav {
     margin: 0;
     padding: 16px;
+    
     border:none;
 }
 
@@ -168,8 +180,13 @@ font-weight:bold;
   margin-top: 10%;
   width: 1300px;
   height: 90%;
-  
 
+}
+
+.how-to-use-container .ant-tabs-nav-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .how-to-use-content {
@@ -290,15 +307,17 @@ font-weight:bold;
 }
 
 .ingredients-section{
-  margin-top: 5%;
-  margin-bottom: 5%;
   margin-right: 50%;
+  border-radius: 10px;
+  
+  
 }
 
 .ingredients-tabs-container {
   background: #FFFBE6;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 10px;
+
   width: 1300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: auto;
@@ -401,9 +420,13 @@ font-weight:bold;
 }
 
 .product-description{
-  text-align: center;
-
+  
+  text-align:start;
+  padding: 0 5px;
+  
+  
 }
+
 
   .product-details {
     width: 100%;
@@ -454,6 +477,10 @@ font-weight:bold;
     flex: 1;
     width: 100%;
   }
+ .h3 {
+    margin-bottom: 7%;
+    margin-top: 5%;
+  }
 
   .how-to-use-container{
     margin-bottom: 5%;
@@ -469,8 +496,11 @@ font-weight:bold;
     width: 100%;
     margin-bottom: 5px;
   }
-
-  
+  .how-to-use-container .ant-tabs-content-holder {
+    margin-top: -10%;
+   
+   
+  }
 
   .ant-tabs-nav {
     padding: 8px;
@@ -482,7 +512,7 @@ font-weight:bold;
 
 
 .faq-container-section{
-  margin-top: -5%;
+  margin-top: 5%;
  
 }
 
