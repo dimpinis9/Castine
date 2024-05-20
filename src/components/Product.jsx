@@ -9,6 +9,9 @@ import { Collapse, Card } from 'antd';
 const { Panel } = Collapse;
 import { PlusCircleOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
+import { useCart } from '../CartContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -32,9 +35,12 @@ const ProductDescription = ({ description }) => {
     setIsExpanded(!isExpanded);
   };
 
+  
+
 
   // Αν το κείμενο δεν είναι αναπτυγμένο, εμφάνισε μόνο τα πρώτα 100 χαρακτήρες
   const displayedDescription = isExpanded ? description : `${description.substring(0, 125)}...`;
+ 
 
   return (
     <div>
@@ -49,12 +55,27 @@ const ProductDescription = ({ description }) => {
 
 
 const Product = () => {
+  const { addToCart } = useCart();
+
+  const handleAddToCart = () => {
+    const product = {
+      id: 1, 
+      name: 'Φυσικό έλαιο CASTINE',
+      price: 47,
+      image: productImage1, 
+    };
+
+    addToCart(product);
+    toast.success(`${product.name} προστέθηκε με επιτυχία στο καλάθι!`);
+  };
 
   const description = "Φυσικό ξηρό λάδι με φυτοστερόλες από λάδι Αβυσσηνίας, που βελτιώνουν σημαντικά την ελαστικότητα των μαλλιών και του δέρματος. Έχοντας διάφανη βελούδινη υφή και άμεση απορρόφηση, περιέχει σύμπλεγμα φυτικών μαλακτικών από Ηλίανθο, Αμύγδαλο, Τζοτζόμπα, Αργκάν και Πράσινο Τσάϊ σε συνδυασμό με αντιοξειδωτικά έλαια Μαύρου Σταφυλιού Ελληνικού Ελαιολάδου οργανικής καλλιέργειας και βιταμίνης Ε. Εμπλουτισμένο με φυτική σιλικόνη για μια μοναδική αίσθηση μεταξένιας απαλότητας στα μαλλιά και το σώμα που διαρκεί, περιέχει συστατικά φυτικής προέλευσης 98%.";
 
 
   return (
+  
     <div className="product-container">
+    <ToastContainer position="top-right" autoClose={3000} hideProgressBar={true} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
     <Carousel autoplay showArrows={false}
       showStatus={false}
       showIndicators={true}
@@ -76,14 +97,14 @@ const Product = () => {
         <h3>Hair & Body</h3>
         <ProductDescription  description={description} />
         <p className="product-price">Αξία: 47€</p>
-        <Button className='add-to-cart-button' type="primary">Προσθήκη στο Καλάθι</Button>
+        <Button onClick={handleAddToCart} className='add-to-cart-button' type="primary">Προσθήκη στο Καλάθι</Button>
       </div>
      
       <div className="oils-introduction-card">
       <h2>Κατάλληλο για...</h2>
       <Tabs defaultActiveKey="1">
         <TabPane tab="Μαλλιά" key="1">
-          <p>Είναι ένα σύμπλεγμα φυσικών ελαίων άμεσης απορρόφησης που προσφέρει ακαταμάχητη λάμψη και άρωμα. Το έλαιο σφραγίζει την υγρασία και διατηρεί τα μαλλιά ενυδατωμένα. Μειώνει το χρόνο στεγνώματος και βοηθάει στο styling. Βοηθάει στην αποκατάσταση των βλαβών της τρίχας. Κάνει τα μαλλιά ευκολοχτένιστα και αποτρέπει το σπάσιμο της τρίχας με αποτέλεσμα τα μαλλιά να διατηρούν το μήκος τους. Ελέγχει το φρεζάρισμα και κάνει τα μαλλιά μαλακά, απαλά, δυνατά και ελαστικά.</p>
+          <p>Το CASTINE dry oil είναι ένα σύμπλεγμα φυσικών ελαίων άμεσης απορρόφησης που προσφέρει ακαταμάχητη λάμψη και άρωμα. Το έλαιο σφραγίζει την υγρασία και διατηρεί τα μαλλιά ενυδατωμένα. Μειώνει το χρόνο στεγνώματος και βοηθάει στο styling. Βοηθάει στην αποκατάσταση των βλαβών της τρίχας. Κάνει τα μαλλιά ευκολοχτένιστα και αποτρέπει το σπάσιμο της τρίχας με αποτέλεσμα τα μαλλιά να διατηρούν το μήκος τους. Ελέγχει το φρεζάρισμα και κάνει τα μαλλιά μαλακά, απαλά, δυνατά και ελαστικά.</p>
         </TabPane>
         <TabPane tab="Δέρμα" key="2">
           <p>Το CASTINE dry oil είναι ένα σύμπλεγμα φυσικών ελαίων άμεσης απορρόφησης που προσφέρει ακαταμάχητη λάμψη και άρωμα. Τα έλαια και τα λιπαρά που παράγει η επιδερμίδα συμβάλουν στην προστασία και την εξισορρόπηση του προστατευτικού φραγμού της αλλά συχνά, λόγω καιρικών συνθηκών, λάθος πρακτικών περιποίησης, το πέρασμα των ετών, η παραγωγή τους μειώνεται και τότε το δέρμα αρχίζει να αφυδατώνεται. Τα έλαια που περιέχει το προϊόν είναι ιδανικά για να εισχωρήσουν στην επιδερμίδα και να συγκρατήσουν στο εσωτερικό της την απαραίτητη υγρασία ώστε να παραμείνει ενυδατωμένη, ελαστική, λαμπερή και απαλή σαν μετάξι.</p>

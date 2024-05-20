@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/MainContent.css';
+import { useNavigate } from 'react-router-dom';
 
-import { useCart } from '../CartContext';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import  productImage9 from '../assets/images/image9.jpg';
 import productImage4 from '../assets/images/image4.jpg';
 import productImage7 from '../assets/images/image7.JPG';
 
@@ -13,30 +10,20 @@ import productImage7 from '../assets/images/image7.JPG';
 
 export const MainContent = () => {
   const [showHero, setShowHero] = useState(true);
+  const navigate = useNavigate();
  
   useEffect(() => {
     setShowHero(true);
   }, []);
 
   const imageUrls = [productImage4, productImage7];
-
-  const { addToCart } = useCart();
-
-  const handleAddToCart = () => {
-    const product = {
-      id: 1, 
-      name: 'Φυσικό έλαιο CASTINE',
-      price: 47,
-      image: productImage9, 
-    };
-
-    addToCart(product);
-    toast.success(`${product.name} προστέθηκε με επιτυχία στο καλάθι!`);
+  const goToProductPage = () => {
+    navigate('/products');
   };
+
 
   return (
     <main>
-         <ToastContainer position="top-right" autoClose={3000} hideProgressBar={true} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
   <div className='image-lmp'>
       <div className="image-container">
         {showHero && (
@@ -63,7 +50,7 @@ export const MainContent = () => {
 {/* <div className="oils-introduction-card"> */}
 <p>Ανακαλύψτε το CASTINE dry oil και επωφεληθείτε από τους θησαυρούς που κρύβει μέσα του.</p>
 <div className="OrderButton">
-<button onClick={handleAddToCart}>ΠΑΡΑΓΓΕΛΙΑ ΤΩΡΑ</button>
+<button onClick={goToProductPage}>ΠΑΡΑΓΓΕΛΙΑ ΤΩΡΑ</button>
 </div>
 </div>
 </div>

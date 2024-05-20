@@ -9,13 +9,22 @@ import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 const CartModal = ({ isOpen, onRequestClose }) => {
   const { cartItems, increaseQuantity, decreaseQuantity } = useCart();
 
+  const handleCheckout = () => {
+    console.log("Proceeding to checkout...");
+    onRequestClose(); // Optionally close the modal on checkout
+    // Navigate to checkout page or handle checkout logic here
+  };
+
   return (
     <Modal
-      title="Το καλάθι σας"
-      open={isOpen}
-      onCancel={onRequestClose}
-      footer={[<Button key="close" onClick={onRequestClose}>Κλείσιμο</Button>]}
-    >
+    title="Το καλάθι σας"
+    open={isOpen}
+    onCancel={onRequestClose}
+    footer={[
+      
+      <Button key="checkout" type="primary" onClick={handleCheckout}>Προχωρήστε στην Αγορά</Button>
+    ]}
+  >
       <List
         itemLayout="horizontal"
         dataSource={cartItems}
