@@ -1,20 +1,26 @@
-
-import React from 'react';
-import '../assets/Footer.css';
-
+import React from "react";
+import "../assets/Footer.css";
 
 const links = [
   { href: "/", text: "Αρχική" },
-  { href: "/about", text: "Σχετικά" },
   { href: "/products", text: "Προϊόντα" },
   { href: "/contact", text: "Επικοινωνία" },
   { href: "/returnPolicy", text: "Πολιτική Επιστροφών" },
+  { href: "/terms", text: "Όροι Χρήσης" },
+  { href: "/shippingInfo", text: "Τρόποι Αποστολής" },
+  { href: "/paymentMethods", text: "Τρόποι Πληρωμής" },
 ];
 
 const socials = [
   { href: "#", icon: "fab fa-facebook" },
-  { href: "https://www.instagram.com/castine_official/", icon: "fab fa-instagram" },
-  { href: "https://www.tiktok.com/@castine_official?_t=8lOL9hGZZ5M&_r=1", icon: "fab fa-tiktok" },
+  {
+    href: "https://www.instagram.com/castine_official/",
+    icon: "fab fa-instagram",
+  },
+  {
+    href: "https://www.tiktok.com/@castine_official?_t=8lOL9hGZZ5M&_r=1",
+    icon: "fab fa-tiktok",
+  },
 ];
 
 export const Footer = () => {
@@ -34,12 +40,16 @@ export const Footer = () => {
           <ul>
             {socials.map((social, index) => (
               <li key={index}>
-                <a href={social.href}><i className={social.icon}></i></a>
+                <a href={social.href}>
+                  <i className={social.icon}></i>
+                </a>
               </li>
             ))}
           </ul>
         </div>
-        <div className="footer-copyright"> {/* Προσθήκη του copyright div */}
+        <div className="footer-copyright">
+          {" "}
+          {/* Προσθήκη του copyright div */}
           &copy; 2024 Castine
         </div>
       </div>
