@@ -93,17 +93,21 @@ const Product = () => {
         swipeable={true}
         stopOnHover={true}
       >
-        {[
-          productImage1,
-          productImage2,
-          productImage3,
-          productImage4,
-          productImage5,
-        ].map((img, index) => (
-          <div key={index}>
-            <img src={img} alt={`Image ${index + 1}`} />
-          </div>
-        ))}
+        <div>
+          <img src={productImage1} alt="Image 1" />
+        </div>
+        <div>
+          <img src={productImage2} alt="Image 2" />
+        </div>
+        <div>
+          <img src={productImage3} alt="Image 3" />
+        </div>
+        <div>
+          <img src={productImage4} alt="Image 4" />
+        </div>
+        <div className="image5">
+          <img src={productImage5} alt="Image 5" />
+        </div>
       </Carousel>
 
       <div className="product-details">

@@ -1,14 +1,12 @@
 .product-container {
   max-width: 1200px;
   margin: 20px auto;
-
 }
 .product-container .carousel img {
   width: 100%;
   height: 800px;
-  object-fit: cover;  
-  object-position: center; 
-
+  object-fit: cover;
+  object-position: center;
 }
 
 .product-container .carousel .control-dots .dot {
@@ -16,17 +14,18 @@
   border: 2px solid #333;
 }
 
-.product-carousel, .how-to-use-container {
+.product-carousel,
+.how-to-use-container {
   grid-column: 1;
 }
 
-.product-description{
+.product-description {
   align-items: center;
   text-align: center;
 }
 
-.read-more-button{
-  background-color: #fbf9ed ;
+.read-more-button {
+  background-color: #fbf9ed;
   border: none;
   color: #333;
   padding: 10px 20px;
@@ -34,7 +33,7 @@
   cursor: pointer;
   margin-bottom: 30px;
   margin-top: -10px;
- font-weight:bold;
+  font-weight: bold;
 }
 
 .read-more-button:hover {
@@ -44,24 +43,21 @@
 
 .product-details h1,
 .product-details h3,
-.product-details 
- {
+.product-details {
   text-align: left; /* Αριστερή στοίχιση, διαθέσιμες επιλογές: left, right, center, justify */
-
 }
-.product-description{
+.product-description {
   text-align: left;
-
 }
 
-.product-price{
+.product-price {
   font-size: 1.2em;
   margin-left: 45%;
-  
+
   margin-top: 1%;
   margin-bottom: 0.5%;
 }
-.add-to-cart-button{
+.add-to-cart-button {
   background-color: black;
   border: none;
   cursor: pointer;
@@ -76,13 +72,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
 
 .add-to-cart-button:hover {
-  background-color: rgba(31, 30, 30, 0.284) !important; 
+  background-color: rgba(31, 30, 30, 0.284) !important;
 }
-
 
 .product-details {
   width: 100%;
@@ -92,18 +86,16 @@
 .product-details h1 {
   font-size: 1.5em;
   margin-left: 0.5%;
- 
 }
 
 .product-details h3 {
   font-size: 1em;
   margin-right: 80%;
-  background-color:#fbf9ed ;
+  background-color: #fbf9ed;
   margin-top: 0.5%;
   margin-left: 0.5%;
-  
 }
-.tabsbtn-properties  {
+.tabsbtn-properties {
   padding: 10px;
   margin-right: 5px;
   list-style: none;
@@ -114,12 +106,11 @@
 
 /* Στυλ για το ενεργό tab */
 
-
 /* Στυλ για τα κείμενα */
 .oils-introduction-card p {
   text-align: justify; /* Για πλήρη στοίχιση κειμένου */
   margin-bottom: 15px;
-   /* Προσθέστε κάποιο margin ανάμεσα στις παραγράφους */
+  /* Προσθέστε κάποιο margin ανάμεσα στις παραγράφους */
 }
 
 .oils-introduction-card .ant-tabs-nav-list {
@@ -129,30 +120,28 @@
 }
 
 .ant-tabs-nav {
-    margin: 0;
-    padding: 16px;
-    
-    border:none;
+  margin: 0;
+  padding: 16px;
+
+  border: none;
 }
 
-
 .ant-tabs-tab:hover {
-    background-color: #e6f7ff; /* Ανοιχτό μπλε background στο hover */
+  background-color: #e6f7ff; /* Ανοιχτό μπλε background στο hover */
 }
 
 /* Στυλ για τα εικονίδια μέσα στα Tabs */
 .ant-tabs-tab i {
-    margin-right: 8px; /* Προσθήκη απόστασης ανάμεσα στο εικονίδιο και το κείμενο */
+  margin-right: 8px; /* Προσθήκη απόστασης ανάμεσα στο εικονίδιο και το κείμενο */
 }
 
 /* Προσαρμογή του περιεχομένου των TabPanels */
 .ant-tabs-content-holder {
-    padding: 20px;
-    border: 1px solid #d9d9d9;
-    border-top: none; /* Αφαίρεση του πάνω border για ομαλή συνέχεια με τα tabs */
-    background-color: white;
-    border: none;
- 
+  padding: 20px;
+  border: 1px solid #d9d9d9;
+  border-top: none; /* Αφαίρεση του πάνω border για ομαλή συνέχεια με τα tabs */
+  background-color: white;
+  border: none;
 }
 
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
@@ -161,14 +150,12 @@
 .ant-tabs-ink-bar {
   background-color: black !important;
   border: none;
-
 }
 
 /* Προαιρετικά, μπορείτε να αλλάξετε το χρώμα του υπόλοιπου κειμένου των tabs για να εξασφαλίσετε καλύτερη αντίθεση */
 .ant-tabs-tab .ant-tabs-tab-btn {
   color: grey; /* Ανοιχτότερο χρώμα για τα μη ενεργά tabs */
 }
-
 
 .how-to-use-container {
   display: flex;
@@ -180,7 +167,6 @@
   margin-top: 10%;
   width: 1300px;
   height: 90%;
-
 }
 
 .how-to-use-container .ant-tabs-nav-list {
@@ -192,15 +178,13 @@
 .how-to-use-content {
   flex: 1;
   margin-right: 20px;
-  
 }
 
-.h3{
+.h3 {
   font-size: 1.3em;
   margin-left: 0.5%;
-  font-weight:bold;
- margin-bottom: 2%;
-
+  font-weight: bold;
+  margin-bottom: 2%;
 }
 
 .image-container {
@@ -208,7 +192,6 @@
   margin: 0; /* Εξασφαλίζουμε ότι δεν υπάρχουν περιθώρια */
   overflow: hidden; /* Εξασφαλίζουμε ότι δεν υπάρχει κανένα μέρος της εικόνας που να υπερχειλίζει */
   margin-bottom: 5%;
- 
 }
 
 .image-container img {
@@ -216,34 +199,28 @@
   height: auto; /* Προσαρμόζουμε το ύψος της εικόνας ανάλογα για να διατηρηθούν οι αναλογίες της */
 }
 
-
- 
-
 .card {
-  grid-row: 3; 
+  grid-row: 3;
   border: 1px solid #ccc;
   justify-content: center;
   align-items: center;
   margin-left: 300px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  width: 100%; 
+  width: 100%;
   margin-top: -40px;
 }
 
 .card-content {
   padding: 30px;
-  
 }
 
-
-.oils-introduction-card{
+.oils-introduction-card {
   margin-right: 20%;
 }
 
-.faq-container-section{
+.faq-container-section {
   margin-top: 5%;
- 
 }
 
 .faq-container {
@@ -279,7 +256,6 @@
   font-size: 1rem;
   color: #333; /* ή ό,τι χρώμα προτιμάτε */
   box-shadow: 0 2px 3px #f0f1f2;
-
 }
 
 .faq-container .ant-collapse > .ant-collapse-item {
@@ -306,15 +282,13 @@
   background-color: #333; /* ή ό,τι χρώμα προτιμάτε */
 }
 
-.ingredients-section{
+.ingredients-section {
   margin-right: 50%;
   border-radius: 10px;
-  
-  
 }
 
 .ingredients-tabs-container {
-  background: #FFFBE6;
+  background: #fffbe6;
   padding: 2rem;
   border-radius: 10px;
 
@@ -322,13 +296,11 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: auto;
   border: none;
-
 }
 
 .ingredients-tabs-container .ant-card {
   background: transparent;
   border: none;
-
 }
 
 .ingredients-header {
@@ -345,7 +317,6 @@
 .ingredients-header p {
   color: #555;
   font-size: 16px;
-  
 }
 
 .ant-tabs-card .ant-tabs-content {
@@ -358,7 +329,6 @@
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 6px #0000000f;
- 
 }
 
 .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane p {
@@ -369,7 +339,7 @@
 
 .ant-tabs-tab {
   border: none;
-  background: #FFFBE6 !important;
+  background: #fffbe6 !important;
 }
 
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
@@ -381,7 +351,9 @@
   border-color: #e8e8e8;
 }
 
-.ant-tabs-tab, .ant-tabs-tab-active, .ant-tabs-tab-disabled {
+.ant-tabs-tab,
+.ant-tabs-tab-active,
+.ant-tabs-tab-disabled {
   background: transparent !important;
 }
 
@@ -391,12 +363,10 @@
 }
 
 .ant-tabs-tab-btn .anticon {
-  color: #FFD700; /* Gold color for the Plus icon */
+  color: #ffd700; /* Gold color for the Plus icon */
   font-size: 16px;
   margin-right: 8px;
 }
-
-
 
 @media (max-width: 768px) {
   .product-container {
@@ -405,28 +375,25 @@
 
   .product-container .carousel img {
     width: 100%;
-    height: 550px;  
-    object-fit: cover;  
-    object-position: center;  
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
   }
 
-  .product-carousel, .how-to-use-container {
+  .product-carousel,
+  .how-to-use-container {
     margin: 0;
     width: 100%;
   }
-.carousel-root {
-  width: 100%;
-  margin-top: 5%;
-}
+  .carousel-root {
+    width: 100%;
+    margin-top: 5%;
+  }
 
-.product-description{
-  
-  text-align:start;
-  padding: 0 5px;
-  
-  
-}
-
+  .product-description {
+    text-align: start;
+    padding: 0 5px;
+  }
 
   .product-details {
     width: 100%;
@@ -442,12 +409,9 @@
   .product-details h3 {
     font-size: 1em;
     margin-right: 75%;
-    background-color:#fbf9ed ;
+    background-color: #fbf9ed;
     margin-top: 0.5%;
-  
   }
- 
-  
 
   .product-price {
     font-size: 1.2em;
@@ -469,20 +433,21 @@
     padding: 10px;
     margin-left: 0;
     width: 100%; /* Αλλαγή από 50% σε 100% */
-   height: auto;
-   display: block;
+    height: auto;
+    display: block;
   }
 
-  .how-to-use-content, .image-container {
+  .how-to-use-content,
+  .image-container {
     flex: 1;
     width: 100%;
   }
- .h3 {
+  .h3 {
     margin-bottom: 7%;
     margin-top: 5%;
   }
 
-  .how-to-use-container{
+  .how-to-use-container {
     margin-bottom: 5%;
     display: block;
   }
@@ -498,63 +463,58 @@
   }
   .how-to-use-container .ant-tabs-content-holder {
     margin-top: -10%;
-   
-   
   }
 
   .ant-tabs-nav {
     padding: 8px;
-}
+  }
 
-.ant-tabs-tab {
+  .ant-tabs-tab {
     padding: 8px; /* Μικρότερο padding για τα tabs σε μικρότερες συσκευές */
+  }
+
+  .faq-container-section {
+    margin-top: 5%;
+  }
+
+  .faq-container {
+    width: 100%; /* ή ό,τι διάσταση προτιμάτε */
+    margin: auto;
+    padding: 2rem;
+    background: #fbf9ed !important; /* ή ό,τι χρώμα φόντου προτιμάτε */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .ingredients-section {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 0%;
+  }
+
+  .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane p {
+    text-align: left; /* ή 'justify', αν προτιμάτε συνεχή στοίχιση */
+    font-size: 0.9em; /* Μικρότερο μέγεθος γραμματοσειράς */
+    padding: 0 10px; /* Προσθήκη εσοχής στα δεξιά και αριστερά */
+  }
+
+  .ingredients-tabs-container {
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+  }
+
+  .ingredients-header h2 {
+    font-size: 20px;
+  }
+
+  .ingredients-header p {
+    font-size: 14px;
+  }
+
+  .image5 {
+    width: 125%;
+  }
 }
-
-
-.faq-container-section{
-  margin-top: 5%;
- 
-}
-
-.faq-container {
-  
-  width: 100%; /* ή ό,τι διάσταση προτιμάτε */
-  margin: auto;
-  padding: 2rem;
-  background: #fbf9ed !important; /* ή ό,τι χρώμα φόντου προτιμάτε */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.ingredients-section{
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-right: 0%;
-
-}
-
-.ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane p {
-  text-align: left; /* ή 'justify', αν προτιμάτε συνεχή στοίχιση */
-  font-size: 0.9em; /* Μικρότερο μέγεθος γραμματοσειράς */
-  padding: 0 10px; /* Προσθήκη εσοχής στα δεξιά και αριστερά */
-}
-
-.ingredients-tabs-container {
-  
-  padding: 2rem;
-  border-radius: 8px;
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: auto;
-}
-
-.ingredients-header h2 {
-  font-size: 20px;
-}
-
-.ingredients-header p {
-  font-size: 14px;
-}
-
-}
-
