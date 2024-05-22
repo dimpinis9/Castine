@@ -1,0 +1,33 @@
+/* CartModal.css */
+.checkout-button {
+  background-color: black; /* Μαύρο χρώμα */
+  color: white; /* Λευκό κείμενο */
+  font-size: 16px; /* Μέγεθος γραμματοσειράς */
+  padding: 10px 20px; /* Εσωτερικά περιθώρια */
+  border-radius: 5px; /* Καμπυλωμένες γωνίες */
+  border: none; /* Χωρίς περίγραμμα */
+  cursor: pointer; /* Δείκτης ποντικιού */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Εφέ αλλαγής χρώματος και μεγέθους */
+  width: 100%; /* Πλάτος 100% για καλύτερη εμφάνιση σε μικρές οθόνες */
+  max-width: 200px; /* Μέγιστο πλάτος για να μην είναι υπερβολικά μεγάλο */
+  margin: 0 auto; /* Κεντράρισμα */
+  display: flex; /* Χρήση flexbox για κεντράρισμα */
+  justify-content: center; /* Οριζόντιο κεντράρισμα */
+  align-items: center; /* Κάθετο κεντράρισμα */
+  height: 50px; /* Σταθερό ύψος για το κουμπί */
+}
+
+.checkout-button:hover {
+  background-color: #333333; /* Σκούρο γκρι κατά το hover */
+  transform: translateY(
+    -2px
+  ); /* Ελαφριά μετατόπιση προς τα πάνω κατά το hover */
+}
+
+@media (max-width: 768px) {
+  .checkout-button {
+    font-size: 14px; /* Μικρότερο μέγεθος γραμματοσειράς για μικρές οθόνες */
+    padding: 8px 16px; /* Μικρότερα εσωτερικά περιθώρια */
+    height: 40px; /* Μικρότερο ύψος για μικρές οθόνες */
+  }
+}

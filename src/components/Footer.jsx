@@ -36,6 +36,19 @@ export const Footer = () => {
             ))}
           </ul>
         </div>
+        <div className="footer-contact">
+          {" "}
+          {/* Προσθήκη της ενότητας επικοινωνίας */}
+          <ul>
+            <li>Διεύθυνση: Φρυνης 55, Αθήνα 11633</li>
+            <li>
+              Email: <a href="mailto:info@castine.gr">info@castine.gr</a>
+            </li>
+            <li>
+              Τηλέφωνο: <a href="tel:+306989417765">698 9417765</a>
+            </li>
+          </ul>
+        </div>
         <div className="footer-social">
           <ul>
             {socials.map((social, index) => (
@@ -47,11 +60,7 @@ export const Footer = () => {
             ))}
           </ul>
         </div>
-        <div className="footer-copyright">
-          {" "}
-          {/* Προσθήκη του copyright div */}
-          &copy; 2024 Castine
-        </div>
+        <div className="footer-copyright">&copy; 2024 Castine</div>
       </div>
     </footer>
   );

@@ -13,10 +13,13 @@
     "@ant-design/icons": "^5.3.6",
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@reduxjs/toolkit": "^2.0.1",
+    "@woocommerce/woocommerce-rest-api": "^1.0.1",
     "antd": "^5.16.2",
     "axios": "^1.6.8",
+    "base-64": "^1.0.0",
     "bootstrap": "^5.3.2",
     "font-awesome-icons": "^1.6.0",
+    "http-proxy-middleware": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
@@ -25,7 +28,9 @@
     "react-router-dom": "^6.21.2",
     "react-spring": "^9.7.3",
     "react-tabs": "^6.0.2",
-    "react-toastify": "^10.0.5"
+    "react-toastify": "^10.0.5",
+    "woocommerce": "^2.4.0",
+    "woocommerce-api": "^1.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

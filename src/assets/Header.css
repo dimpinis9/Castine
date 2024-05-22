@@ -22,7 +22,10 @@ header {
   font-size: 0.5rem; /* Μικρότερο μέγεθος γραμματοσειράς για το κείμενο */
   position: absolute; /* Απόλυτη τοποθέτηση για το positioning στο header */
 
-  transform: translate(50%, -50%); /* Κεντράρισμα στην επάνω δεξιά γωνία του εικονιδίου καλαθιού */
+  transform: translate(
+    50%,
+    -50%
+  ); /* Κεντράρισμα στην επάνω δεξιά γωνία του εικονιδίου καλαθιού */
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1); /* Λεπτή σκιά για διακριτικό depth */
 }
 
@@ -33,7 +36,7 @@ nav ul {
   gap: 2rem;
   flex-direction: column; /* Αλλάξτε τον κατακόρυφο προσανατολισμό */
 
-    padding: 1rem; 
+  padding: 1rem;
 }
 
 nav ul li a {
@@ -88,20 +91,17 @@ nav ul li a:hover {
 .menu-icon {
   display: block;
   cursor: pointer;
-
-  
 }
-
 
 .open {
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px; 
+  width: 250px;
   height: 100vh;
-  background-color: #fff; 
+  background-color: #fff;
   overflow: auto;
- transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
   z-index: 1000;
 }
 
@@ -119,13 +119,13 @@ nav.open {
   display: block; /* Εμφανίστε το μενού όταν είναι ανοικτό */
 }
 
-
 .header-icons {
   display: flex;
   align-items: center;
 }
 
-.login-icon, .cart {
+.login-icon,
+.cart {
   margin-left: 20px;
 }
 
@@ -137,13 +137,13 @@ nav.open {
 }
 /* Απόκριση σε μικρές οθόνες */
 @media only screen and (max-width: 600px) {
- 
   header {
-    padding: 1rem; 
+    padding: 1rem;
   }
 
   .logo img {
-    height: 20px; /* Μικρότερο μέγεθος λογότυπου για μικρές οθόνες */
+    height: 20px;
+    margin-left: 20%;
   }
 
   .menu-icon {
@@ -164,15 +164,15 @@ nav.open {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px; 
+    width: 250px;
     height: 100vh;
-    background-color: #fff; 
+    background-color: #fff;
     overflow: auto;
     z-index: 1000;
   }
 
   nav.open {
-    display: block; 
+    display: block;
     width: 100%; /* Εμφανίστε το μενού όταν είναι ανοικτό */
   }
 
@@ -187,43 +187,43 @@ nav.open {
     text-align: center; /* Κείμενο κεντρικά */
   }
 }
-  nav ul li a {
-    font-size: 0.9rem; /* Μικρότερο μέγεθος γραμματοσειράς για μικρές οθόνες */
-  }
-  nav ul li button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    color: #333; /* Χρώμα κειμένου */
-  }
-  
-  nav ul li button:hover {
-    background-color: #f0f0f0;
-    color:#ca9613 ; /* Αλλαγή χρώματος κατά το hover */
-  }
-  
-  nav ul li button i {
-    font-size: 20px;
-  }
+nav ul li a {
+  font-size: 0.9rem; /* Μικρότερο μέγεθος γραμματοσειράς για μικρές οθόνες */
+}
+nav ul li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: #333; /* Χρώμα κειμένου */
+}
 
-  .cart img {
-    height: 25px; /* Μικρότερο μέγεθος εικονίδιου καρού για μικρές οθόνες */
-  }
+nav ul li button:hover {
+  background-color: #f0f0f0;
+  color: #ca9613; /* Αλλαγή χρώματος κατά το hover */
+}
 
-  .cart .cart-icon {
-    width: 25px;
-    height: 25px; /* Μικρότερο μέγεθος εικονίδιου καρού για μικρές οθόνες */
-  }
+nav ul li button i {
+  font-size: 20px;
+}
 
-  .cart .cart-icon i {
-    font-size: 1rem; /* Μικρότερο μέγεθος εικονίδιου καρού για μικρές οθόνες */
-  }
+.cart img {
+  height: 25px; /* Μικρότερο μέγεθος εικονίδιου καρού για μικρές οθόνες */
+}
 
-  .cart .cart-count {
-    padding: 3px 8px; /* Μικρότερο padding για τον αριθμό στο καλάθι για μικρές οθόνες */
-    font-size: 0.8rem; /* Μικρότερο μέγεθος γραμματοσειράς για τον αριθμό στο καλάθι για μικρές οθόνες */
-  }
+.cart .cart-icon {
+  width: 25px;
+  height: 25px; /* Μικρότερο μέγεθος εικονίδιου καρού για μικρές οθόνες */
+}
+
+.cart .cart-icon i {
+  font-size: 1rem; /* Μικρότερο μέγεθος εικονίδιου καρού για μικρές οθόνες */
+}
+
+.cart .cart-count {
+  padding: 3px 8px; /* Μικρότερο padding για τον αριθμό στο καλάθι για μικρές οθόνες */
+  font-size: 0.8rem; /* Μικρότερο μέγεθος γραμματοσειράς για τον αριθμό στο καλάθι για μικρές οθόνες */
+}
 
 /* Εμφανίστε το εικονίδιο του μενού στην αριστερή άκρη του header */
 .menu-icon {
@@ -236,7 +236,8 @@ nav.open {
   align-items: center;
 }
 
-.login-icon, .cart {
+.login-icon,
+.cart {
   margin-left: 20px;
 }
 
@@ -246,7 +247,5 @@ nav.open {
   font-size: 20px; /* Μέγεθος εικονιδίου */
   cursor: pointer;
   margin-top: 1px;
-   /* Καθορίστε τον δείκτη ως δείκτη κατάλληλο για το κλικ */
+  /* Καθορίστε τον δείκτη ως δείκτη κατάλληλο για το κλικ */
 }
-
-

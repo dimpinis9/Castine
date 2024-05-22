@@ -66,11 +66,43 @@ function App() {
 
           <Route path="/login" element={<Login />} />
 
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/shippingInfo" element={<ShippingInfo />} />
+          <Route
+            path="/terms"
+            element={
+              <>
+                <Terms />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/shippingInfo"
+            element={
+              <>
+                <ShippingInfo />
+                <Footer />
+              </>
+            }
+          />
 
-          <Route path="/returnPolicy" element={<ReturnPolicy />} />
-          <Route path="/payment-methods" component={<PaymentMethods />} />
+          <Route
+            path="/returnPolicy"
+            element={
+              <>
+                <ReturnPolicy />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/paymentMethods"
+            element={
+              <>
+                <PaymentMethods />
+                <Footer />
+              </>
+            }
+          />
         </Routes>
       </div>
     </div>
