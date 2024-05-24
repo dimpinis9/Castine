@@ -67,7 +67,7 @@ const Product = () => {
 
   const description =
     "Φυσικό ξηρό λάδι με φυτοστερόλες από λάδι Αβυσσηνίας, που βελτιώνουν σημαντικά την ελαστικότητα των μαλλιών και του δέρματος. Έχοντας διάφανη βελούδινη υφή και άμεση απορρόφηση, περιέχει σύμπλεγμα φυτικών μαλακτικών από Ηλίανθο, Αμύγδαλο, Τζοτζόμπα, Αργκάν και Πράσινο Τσάϊ σε συνδυασμό με αντιοξειδωτικά έλαια Μαύρου Σταφυλιού Ελληνικού Ελαιολάδου οργανικής καλλιέργειας και βιταμίνης Ε. Εμπλουτισμένο με φυτική σιλικόνη για μια μοναδική αίσθηση μεταξένιας απαλότητας στα μαλλιά και το σώμα που διαρκεί, περιέχει συστατικά φυτικής προέλευσης 98%.";
-
+  const isMobile = window.innerWidth <= 768;
   return (
     <div className="product-container">
       <ToastContainer
@@ -83,6 +83,7 @@ const Product = () => {
       />
       <Carousel
         autoplay
+        swipeable={!isMobile} // Απενεργοποίηση swipe για κινητά
         showArrows={false}
         showStatus={false}
         showIndicators={true}
@@ -90,7 +91,6 @@ const Product = () => {
         infiniteLoop={true}
         autoPlay={true}
         interval={2000}
-        swipeable={true}
         stopOnHover={true}
       >
         <div>
