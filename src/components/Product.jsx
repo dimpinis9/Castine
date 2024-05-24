@@ -83,7 +83,7 @@ const Product = () => {
       />
       <Carousel
         autoplay
-        swipeable={!isMobile} // Απενεργοποίηση swipe για κινητά
+        swipeable={!isMobile}
         showArrows={false}
         showStatus={false}
         showIndicators={true}
@@ -292,6 +292,15 @@ function FAQCollapse() {
 }
 
 const IngredientsTabs = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className="ingredients-section">
       <div className="ingredients-tabs-container">
@@ -503,8 +512,40 @@ const IngredientsTabs = () => {
               </p>
             </TabPane>
           </Tabs>
+          <Button
+            type="primary"
+            onClick={openModal}
+            className="see-all-ingredients-button"
+          >
+            Δείτε όλα τα συστατικά
+          </Button>
         </Card>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="All Ingredients Modal"
+        className="ingredients-modal"
+        overlayClassName="ingredients-modal-overlay"
+      >
+        <h2>Πλήρης Κατάλογος Συστατικών</h2>
+        <p>
+          DICAPRYLYL CARBONATE, CAPRYLIC/CAPRIC TRIGLYCERIDE, SIMMONDSIA
+          CHINENSIS (JOJOBA) SEED OIL, PRUNUS AMYGDALUS DULCIS (SWEET ALMOND)
+          OIL, HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL, CETEARYL ISONONANOATE,
+          DICAPRYLYL ETHER, COCO-CAPRYLATE/CAPRATE, VITIS VINIFERA (BLACK GRAPE)
+          SEED OIL, CAMELLIA SINENSIS (GREEN TEA) SEED OIL, CRAMBE ABYSSINICA
+          SEED OIL PHYTOSTEROL ESTERS, ARGANIA SPINOSA (ARGAN) KERNEL OIL, OLEA
+          EUROPAEA (OLIVE) FRUIT OIL*,*ORGANIC CULTIVATED, PARFUM (FRAGRANCE),
+          HYDROGENATED ETHYLHEXYL OLIVATE, GLYCERYL CAPRYLATE, TOCOPHERYL
+          ACETATE, HYDROGENATED OLIVE OIL UNSAPONIFIABLES, HEXYL CINNAMAL,
+          LINALOOL, BENZYL ALCOHOL, COUMARIN.
+        </p>
+
+        <Button onClick={closeModal} className="close-modal-button">
+          Κλείσιμο
+        </Button>
+      </Modal>
     </div>
   );
 };
