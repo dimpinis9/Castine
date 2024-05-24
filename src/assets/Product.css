@@ -431,8 +431,8 @@
     grid-template-columns: 1fr;
   }
   .see-all-ingredients-button {
-    font-size: 13px;
-    padding: 10px 15px;
+    font-size: 15px;
+    width: 90%;
   }
 
   .product-container .carousel img {
