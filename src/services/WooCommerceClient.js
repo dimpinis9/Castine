@@ -7,7 +7,7 @@ const consumerSecret = "cs_822702d903e6edeeefdbf759929a950ad832a9af"; // Αντ�
 const authString = base64.encode(`${consumerKey}:${consumerSecret}`);
 
 const WooCommerceClient = axios.create({
-  baseURL: "https://www.33383834146.blog.com.gr/wp-json/wc/v3",
+  baseURL: "https://www.castine.gr/wp-json/wc/v3",
   headers: {
     Authorization: `Basic ${authString}`,
     "Content-Type": "application/json",
