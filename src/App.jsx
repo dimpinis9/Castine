@@ -15,7 +15,7 @@ import PaymentMethods from "./components/PaymentMethods";
 import "./App.css";
 
 function App() {
-  // const location = useLocation();
+  console.log("App component mounted");
 
   let welcomeClass = "welcome";
 
