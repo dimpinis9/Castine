@@ -15,7 +15,7 @@ export default defineConfig({
   build: {
     outDir: "dist",
     assetsDir: "assets",
-    chunkSizeWarningLimit: 1000, // Αύξηση του ορίου για να αποφύγουμε τις προειδοποιήσεις
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -23,6 +23,7 @@ export default defineConfig({
             return "vendor"; // Δημιουργία ξεχωριστού chunk για τα node_modules
           }
         },
+        format: "es", // Format για ES modules
       },
     },
   },

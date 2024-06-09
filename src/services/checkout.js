@@ -1,18 +1,24 @@
-// src/services/checkout.js
-import api from "./WooCommerceClient";
+import axios from "axios";
 
-const createOrder = async (orderData) => {
-  console.log("Creating order with data:", orderData); // Log the order data
+const createOrder = async (orderDetails) => {
   try {
-    const response = await api.post("orders", orderData);
-    console.log("Order response:", response.data); // Log the response data
+    const response = await axios.post(
+      "https://www.castine.gr//wp-json/wc/v3/orders",
+      orderDetails,
+      {
+        auth: {
+          username: "ck_0fc3e2cee57f349f12e6a8e4fcb1a0a4e84b2356",
+          password: "cs_09856f1043e938c0cda5f7319c078f8c58fab8a5",
+        },
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
     return response.data;
   } catch (error) {
     console.error("Error creating order:", error);
-    if (error.response) {
-      console.error("Response data:", error.response.data); // Log the response data if available
-      console.error("Response status:", error.response.status); // Log the response status if available
-    }
     throw error;
   }
 };

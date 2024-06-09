@@ -1,4 +1,3 @@
-// src/components/CartModal.js
 import React from "react";
 import Modal from "antd/lib/modal/Modal";
 import List from "antd/lib/list";
@@ -15,50 +14,11 @@ const CartModal = ({ isOpen, onRequestClose }) => {
     console.log("Proceeding to checkout...");
     console.log("Cart items:", cartItems);
 
-    const orderDetails = {
-      payment_method: "bacs", // Παράδειγμα μεθόδου πληρωμής
-      payment_method_title: "Direct Bank Transfer",
-      set_paid: true,
-      billing: {
-        first_name: "John",
-        last_name: "Doe",
-        address_1: "969 Market",
-        address_2: "",
-        city: "San Francisco",
-        state: "CA",
-        postcode: "94103",
-        country: "US",
-        email: "john.doe@example.com",
-        phone: "(555) 555-5555",
-      },
-      shipping: {
-        first_name: "John",
-        last_name: "Doe",
-        address_1: "969 Market",
-        address_2: "",
-        city: "San Francisco",
-        state: "CA",
-        postcode: "94103",
-        country: "US",
-      },
-      line_items: cartItems.map((item) => ({
-        product_id: item.id,
-        quantity: item.quantity,
-      })),
-      shipping_lines: [
-        {
-          method_id: "flat_rate",
-          method_title: "Flat Rate",
-          total: "10.00",
-        },
-      ],
-    };
-
     try {
-      const order = await createOrder(orderDetails);
-      console.log("Order created successfully:", order);
-      // Αν θέλετε να κλείσετε το modal μετά την ολοκλήρωση του checkout
-      onRequestClose();
+      const orderId = await createOrder(cartItems);
+      console.log("Order created successfully:", orderId);
+      // Redirect to WooCommerce checkout page
+      window.location.href = `https://www.castine.gr/checkout/order-pay/${orderId}/?key=wc_order_key`;
     } catch (error) {
       console.error("Error creating order:", error);
     }
@@ -74,7 +34,7 @@ const CartModal = ({ isOpen, onRequestClose }) => {
           key="checkout"
           type="primary"
           onClick={handleCheckout}
-          className="checkout-button" // Προσθέτουμε μια κλάση για προσαρμοσμένα στυλ
+          className="checkout-button"
         >
           Προχωρήστε στην Αγορά
         </Button>,
